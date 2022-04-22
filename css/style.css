@@ -6,19 +6,27 @@ body {
 
 #game-container {
     width: 500px;
+    background-color: #c1c1c1;
     min-height: 300px;
     margin: 0 auto;
+    padding: 20px;
     border: 1px solid black;
     border-radius: 20px;
+}
+
+#header{
+    font-size: 2em;
+    text-decoration: underline;
 }
 
 .button { 
     padding: 5px 10px;
     margin: 5px 10px;
     background-color: #e1e1e1;
+    border: 1px solid white;
 }
 
 .buttonsel {
-    background-color: beige;
-    transition: 1s;
+    background-color: blue;
+    font-size: 4rem;
 }
