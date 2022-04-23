@@ -1,7 +1,7 @@
 
 body {
     background-color: aliceblue;
-    padding: 50px;
+    padding: 20px;
 }
 
 #game-container {
@@ -15,18 +15,23 @@ body {
 }
 
 #header{
+    text-align: center;
     font-size: 2em;
     text-decoration: underline;
 }
 
-.button { 
-    padding: 5px 10px;
-    margin: 5px 10px;
+button { 
+    width: 250px;
+    text-align: center;
+    padding: 5px 20px;
+    margin: 0 auto;
     background-color: #e1e1e1;
+    transition: 0.3s ease-out;
     border: 1px solid white;
+    border-radius: 20px;
 }
 
-.buttonsel {
-    background-color: blue;
-    font-size: 4rem;
+button:hover {
+    background-color: #c1c1c1;
+    transition: 0.3s ease-in;
 }
