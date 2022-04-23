@@ -11,9 +11,10 @@
 <body>
     
     <header><h2 id="header">Quirky Quiz</h2></header>
-    <section id="game-container">
-            <nav><h3 id="heading">Rules</h3></nav>
-            <article id="gamecontent">
+
+    <section class="container">
+            <article id="rules" class="rules"> <!-- Displays the general rules for the game -->
+                <nav>Rules</nav>
                 <ul>
                     <li>1 or 2 players</li>
                     <li>Each player chooses a name and genre</li>
@@ -25,12 +26,32 @@
                     <li>Before each question there is a countdown timer of 3 seconds</li>
                     <li>Best score out of 5 wins!</li>
                 </ul>
-                <button>Start game</button>
+                <button onClick="startGame()">Start game</button>
+            </article>
+
+
+            <article id="createplayer"> <!-- Form for creating player -->
+                <nav id="heading">Create player:</nav>
+                <form class="form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Player name" class="input"><br>
+                    <label for="color">Choose a color:</label>
+                    <input type="color" id="color" class="input"><br>
+                    <p>Choose a genre:</p>
+                    <label for="movies">Movies</label>
+                    <input type="checkbox" id="movies" name="movies" class="checkbox">
+                    <label for="sports">Sports</label>
+                    <input type="checkbox" id="sports" name="sports" class="checkbox">
+                    <label for="entertainment">Entertainment</label>
+                    <input type="checkbox" id="entertainment" name="entertainment" class="checkbox">
+
+                </form>
             </article>
     </section>
 
     <aside id="scores">scores go here</aside>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js">
+    </script>
 </body>
 </html>
