@@ -14,7 +14,11 @@ countDown(){
 
 }
 
-showQuestion(){
+newQuestion(){
+
+}
+
+checkAnswer(){
 
 }
 
@@ -23,5 +27,5 @@ updateScore(){
 }
 
 scoreboard(){
-    
+
 }
