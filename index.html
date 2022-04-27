@@ -34,18 +34,26 @@
                 <nav id="heading">Create player:</nav>
                 <form class="form">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Player name" class="input"><br>
-                    <label for="color">Choose a color:</label>
-                    <input type="color" id="color" class="input"><br>
-                    <p>Choose a genre:</p>
-                    <label for="movies">Movies</label>
-                    <input type="checkbox" id="movies" name="movies" class="checkbox">
-                    <label for="sports">Sports</label>
-                    <input type="checkbox" id="sports" name="sports" class="checkbox">
-                    <label for="entertainment">Entertainment</label>
-                    <input type="checkbox" id="entertainment" name="entertainment" class="checkbox">
+                    <input type="text" id="name" placeholder="Player name" class="input" required onkeyup="updatePlayer('name');" autocomplete="off"><br>
+                    <label for="age">Enter your age:</label>
+                    <input type="text" id="age" class="input" required maxlength="2" minlength="2" style="width: 50px;" onkeyup="updatePlayer('age');"><br>
+                    <label for="genre">Select a genre:</label>
+                    <select name="genre" id="genre" required  onchange="updatePlayer('genre');">
+                        <option value="">Choose a genre:</option>
+                        <option value="Music">Music</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Entertainment">Entertainment</option>
+                    </select><br><br>
+                    <input type="submit" id="createplayer" class="button" value="Create player"></input>
 
                 </form>
+
+                    <article id="playerinfo" style="margin-top: 50px;">
+                            <p>Player info comes here</p>
+                            <p id="playerName">Name</p>
+                            <p id="playerAge">Age</p>
+                            <p id="playerGenre">Genre</p>
+                    </article>
             </article>
     </section>
 
