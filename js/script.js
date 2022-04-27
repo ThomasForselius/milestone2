@@ -2,63 +2,62 @@
 
 document.addEventListener('DOMContentLoaded', function(){ 
     console.log('Game loaded');
-    
 });
-
-function startGame() {
-    // Changes heading to 'Create a player'
-    let heading = document.getElementById('heading').innerHTML = 'Create a player:';
-    // Rules fade and slide away to reveal 'Create a player' page, using class name 'rules_after'
-    let rules = document.getElementById('rules').className = "rules_after";
-    return;
-}
-
 
 var player = {name:"", age:"", genre:"", score:0}; // Declares an object to store player data in
 // Gets and declares player name, color and genre id´s from the 'Create a player' page
 var playerName = document.getElementById('name');
 var playerAge = document.getElementById('age');
 var playerGenre = document.getElementById('genre');
-var currentQuestion = 0;
-var question = 0;
+var currentQuestion = 0; //keeps track of which question is active
+var heading = document.getElementById('heading');
+const question = [
+    ['What is my name', 'Thomas', 'Johan', 'Anders', 'Stefan', 1],
+    ['What language is this written in?', 'html', 'css', 'pytohn', 'js', 2]];
 
+console.log(question[0][0]);
 
-function updatePlayer(type){
-
-
-    // Updates the name, age or genre in the player card when user types into the input box
-    if(type == "name"){
-            document.getElementById('playerName').innerHTML = 'Name: ' + playerName.value;
-    }
-    else if(type == "age"){
-        document.getElementById('playerAge').innerHTML = 'Age: ' + playerAge.value;
-    }
-    else if(type == "genre"){
-        document.getElementById('playerGenre').innerHTML = 'Genre: ' + playerGenre.value;
-    }
+function startGame() {
+    heading.innerHTML = 'Create a player:'; // Changes heading to 'Create a player'
+    let rules = document.getElementById('rules').className = "rules_after"; // Rules fade & slide away to reveal 'Create a player' page, using class name 'rules_after'
+    console.log('start game');
+    //return;
 }
 
+function updatePlayer(type){ //gets the type of input to update
+    // Updates the name, age or genre in the player card when user types into the input box, depending on what input is being changed
+    if(type == "name"){ document.getElementById('playerName').innerHTML = 'Name: ' + playerName.value;}
+    else if(type == "age"){ document.getElementById('playerAge').innerHTML = 'Age: ' + playerAge.value;}
+    else if(type == "genre"){ document.getElementById('playerGenre').innerHTML = 'Genre: ' + playerGenre.value;}
+    console.log('update');
+}
 
 // function checkName() {
 //     playerName.value = playerName.value.replace(/[^a-z]/g, "");
 // }
 
 function createPlayer() {
-    document.getElementById('submit').addEventListener('submit', scoreboard());
+    console.log('create');
+    //event.preventDefault();
     player.name = playerName.value;
     player.age = playerAge.value;
     player.genre = playerGenre.value;
     console.log(player);
+    
+    document.getElementById('playerinfo').style.visibility = 'hidden';
+    document.getElementById('question').style.visibility = 'visible';
+    document.getElementById('questionheader').innerHTML = question[0][0];
+    //newQuestion();
     scoreboard();
-    return;
 }
 
 function countDown(){
-
+    
 }
 
-function newQuestion(question){
-    
+function newQuestion(){
+    //event.preventDefault();
+    console.log(question[1]);
 }
 
 function checkAnswer(){
@@ -80,6 +79,7 @@ function scoreboard(){
                 <td><b>Player Name: </td>
                 <td><b>Age: </b></td>
                 <td><b>Genre: </b></td>
+                <td><b>Points: </b></td>
             </tr>
         </thead>
         <tbody>
@@ -87,13 +87,13 @@ function scoreboard(){
                 <td>${player.name}</td>
                 <td>${player.age}</td>
                 <td>${player.genre}</td>
+                <td>${player.score}</td>
             </tr>
         </tbody>
     
     </table>
 
     `;
-
-    scores.innerHTML = html; 
-    
+    document.getElementById('scores').innerHTML = html; 
+    console.log('scores');
 }
