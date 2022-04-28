@@ -58,7 +58,7 @@ button:hover {
     transition: 0.3s ease-in;
 }
 
-#createplayer_after {
+.createplayer_after {
     margin-top: -300px;
     height: 300px;
     opacity: 0%;
