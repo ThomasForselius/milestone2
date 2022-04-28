@@ -45,7 +45,7 @@ function createPlayer() {
     document.getElementById('playerinfo').style.visibility = 'hidden';
     document.getElementById('question').style.visibility = 'visible';
     document.getElementById('createplayerbtn').style.visibility = 'hidden';
-    document.getElementById('questionheader').innerHTML = question[0][0];
+    document.getElementById('createplayer').className = "createplayer_after";
     newQuestion();
     scoreboard();
 }
@@ -56,6 +56,7 @@ function countDown(){
 
 function newQuestion(){
     event.preventDefault();
+    document.getElementById('questionheader').innerHTML = question[0][0];
     console.log(question[1]);
 }
 
