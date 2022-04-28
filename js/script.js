@@ -1,9 +1,7 @@
 //----- Default displayed text when page is loaded ----- //
+document.addEventListener('DOMContentLoaded', function(){ console.log('Game loaded'); });
 
-document.addEventListener('DOMContentLoaded', function(){ 
-    console.log('Game loaded');
-});
-
+// ----- Defining variabels used in game ----- //
 var player = {name:"", age:"", genre:"", score:0}; // Declares an object to store player data in
 // Gets and declares player name, color and genre id´s from the 'Create a player' page
 var playerName = document.getElementById('name');
@@ -29,7 +27,7 @@ function updatePlayer(type){ //gets the type of input to update
     if(type == "name"){ document.getElementById('playerName').innerHTML = 'Name: ' + playerName.value;}
     else if(type == "age"){ document.getElementById('playerAge').innerHTML = 'Age: ' + playerAge.value;}
     else if(type == "genre"){ document.getElementById('playerGenre').innerHTML = 'Genre: ' + playerGenre.value;}
-    console.log('update');
+    console.log(`update ${player.name}`);
 }
 
 // function checkName() {
@@ -37,8 +35,8 @@ function updatePlayer(type){ //gets the type of input to update
 // }
 
 function createPlayer() {
+    event.preventDefault();
     console.log('create');
-    //event.preventDefault();
     player.name = playerName.value;
     player.age = playerAge.value;
     player.genre = playerGenre.value;
@@ -46,8 +44,9 @@ function createPlayer() {
     
     document.getElementById('playerinfo').style.visibility = 'hidden';
     document.getElementById('question').style.visibility = 'visible';
+    document.getElementById('createplayerbtn').style.visibility = 'hidden';
     document.getElementById('questionheader').innerHTML = question[0][0];
-    //newQuestion();
+    newQuestion();
     scoreboard();
 }
 
@@ -56,7 +55,7 @@ function countDown(){
 }
 
 function newQuestion(){
-    //event.preventDefault();
+    event.preventDefault();
     console.log(question[1]);
 }
 
