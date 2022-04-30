@@ -34,36 +34,45 @@ function updatePlayer(type){ //gets the type of input to update
 //     playerName.value = playerName.value.replace(/[^a-z]/g, "");
 // }
 
-function createPlayer() {
+
+document.getElementById('create').addEventListener('submit', (event) => {
+
     event.preventDefault();
-    if(playerName.value == ""){
+    if(playerName == ""){
         playerName.style.border="1px solid red";
         playerName.focus();
     }
-    else if(playerAge == ""){
+    if(playerAge == ""){
         playerAge.style.border="1px solid red";
         playerAge.focus();
     }
-    else if(playerGenre == ""){
+    if(playerGenre == ""){
         playerGenre.style.border="1px solid red";
         playerGenre.focus();
     }
     else{
-        console.log('player created');
-        player.name = playerName.value;
-        player.age = playerAge.value;
-        player.genre = playerGenre.value;
-        
-        console.log(player);
-        
-        document.getElementById('playerinfo').style.visibility = 'hidden';
-        document.getElementById('question').style.visibility = 'visible';
-        document.getElementById('createplayerbtn').style.visibility = 'hidden';
-        document.getElementById('createplayer').className = "createplayer_after";
-        newQuestion();
-        scoreboard();
-
+        createPlayer();
     }
+
+})
+
+
+function createPlayer() {
+
+    console.log('player created');
+    player.name = playerName.value;
+    player.age = playerAge.value;
+    player.genre = playerGenre.value;
+    
+    console.log(player);
+    
+    document.getElementById('playerinfo').style.visibility = 'hidden';
+    document.getElementById('question').style.visibility = 'visible';
+    document.getElementById('createplayerbtn').style.visibility = 'hidden';
+    document.getElementById('createplayer').className = "createplayer_after";
+    newQuestion();
+    scoreboard();
+
 }
 
 function countDown(){
