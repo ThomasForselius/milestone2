@@ -79,7 +79,7 @@ function createPlayer() {
 }
 
 function countDown(){
-    
+    setTimeout()
 }
 
 function newQuestion(){
