@@ -39,12 +39,12 @@
                     <input type="text" id="age" class="input" required maxlength="2" minlength="2" style="width: 50px;" onkeyup="updatePlayer('age');"><br>
                     <label for="genre">Select a genre:</label>
                     <select name="genre" id="genre" required  onchange="updatePlayer('genre');">
-                        <option>Choose a genre:</option>
+                        <option value="" disabled selected>Choose a genre:</option>
                         <option value="Music">Music</option>
                         <option value="Sports">Sports</option>
                         <option value="Entertainment">Entertainment</option>
                     </select><br><br>
-                    <input type="submit" id="createplayerbtn" class="button" value="Create player" onclick="createPlayer()"></input>
+                    <button type="submit" id="createplayerbtn" class="button">Create player</button>
 
                 </form>
 
