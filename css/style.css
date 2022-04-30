@@ -42,6 +42,11 @@ body {
     transition: 1s;
 }
 
+.questionheader{
+    text-align: center;
+    font-size: 1.5em;
+}
+
 button { 
     width: 250px;
     text-align: center;
