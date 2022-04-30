@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function(){ console.log('Game load
 // ----- Defining variabels used in game ----- //
 var player = {name:"", age:"", genre:"", score:0}; // Declares an object to store player data in
 // Gets and declares player name, color and genre id´s from the 'Create a player' page
-var playerName = document.getElementById('name');
-var playerAge = document.getElementById('age');
-var playerGenre = document.getElementById('genre');
+const playerName = document.getElementById('name');
+const playerAge = document.getElementById('age');
+const playerGenre = document.getElementById('genre');
 var currentQuestion = 0; //keeps track of which question is active
 var heading = document.getElementById('heading');
 const question = [
@@ -37,21 +37,24 @@ function updatePlayer(type){ //gets the type of input to update
 
 document.getElementById('create').addEventListener('submit', (event) => {
 
-    event.preventDefault();
-    if(playerName == ""){
+        event.preventDefault();
+    if(playerName.value == "" || playerName.value == null){
         playerName.style.border="1px solid red";
         playerName.focus();
+        return;
     }
-    if(playerAge == ""){
+    if(playerAge.value == ""){
         playerAge.style.border="1px solid red";
         playerAge.focus();
+        return;
     }
-    if(playerGenre == ""){
+    if(playerGenre.value == ""){
         playerGenre.style.border="1px solid red";
         playerGenre.focus();
+        return;
     }
     else{
-        createPlayer();
+        createPlayer(); // Call function to fill the variables into the player object
     }
 
 })
@@ -68,7 +71,7 @@ function createPlayer() {
     
     document.getElementById('playerinfo').style.visibility = 'hidden';
     document.getElementById('question').style.visibility = 'visible';
-    document.getElementById('createplayerbtn').style.visibility = 'hidden';
+    //document.getElementById('createplayerbtn').style.visibility = 'hidden';
     document.getElementById('createplayer').className = "createplayer_after";
     newQuestion();
     scoreboard();

@@ -34,17 +34,17 @@
                 <nav id="heading">Create player:</nav>
                 <form class="form" id="create">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Player name" class="input" required onkeyup="updatePlayer('name');" autocomplete="off"><br>
+                    <input type="text" id="name" placeholder="Player name" class="input" onkeyup="updatePlayer('name');" autocomplete="off"><br>
                     <label for="age">Enter your age:</label>
-                    <input type="text" id="age" class="input" required maxlength="2" minlength="2" style="width: 50px;" onkeyup="updatePlayer('age');"><br>
+                    <input type="text" id="age" class="input" maxlength="2" minlength="2" style="width: 50px;" onkeyup="updatePlayer('age');"><br>
                     <label for="genre">Select a genre:</label>
-                    <select name="genre" id="genre" required  onchange="updatePlayer('genre');">
+                    <select name="genre" id="genre" onchange="updatePlayer('genre');">
                         <option value="" disabled selected>Choose a genre:</option>
                         <option value="Music">Music</option>
                         <option value="Sports">Sports</option>
                         <option value="Entertainment">Entertainment</option>
                     </select><br><br>
-                    <button type="submit" id="createplayerbtn" class="button">Create player</button>
+                    <button type="submit" class="button">Create player</button>
 
                 </form>
 
