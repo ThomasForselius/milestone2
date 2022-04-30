@@ -9,9 +9,11 @@ const playerAge = document.getElementById('age');
 const playerGenre = document.getElementById('genre');
 var currentQuestion = 0; //keeps track of which question is active
 var heading = document.getElementById('heading');
+var questionheader = document.getElementById('questionheader');
 const question = [
     ['What is my name', 'Thomas', 'Johan', 'Anders', 'Stefan', 1],
     ['What language is this written in?', 'html', 'css', 'pytohn', 'js', 2]];
+
 
 console.log(question[0][0]);
 
@@ -73,17 +75,22 @@ function createPlayer() {
     document.getElementById('question').style.visibility = 'visible';
     //document.getElementById('createplayerbtn').style.visibility = 'hidden';
     document.getElementById('createplayer').className = "createplayer_after";
-    newQuestion();
+    countDown();
     scoreboard();
 
 }
 
 function countDown(){
-    setTimeout()
+    setTimeout(function(){questionheader.innerHTML = "5";}, 1000);
+    setTimeout(function(){questionheader.innerHTML = "4";}, 2000);
+    setTimeout(function(){questionheader.innerHTML = "3";}, 3000);
+    setTimeout(function(){questionheader.innerHTML = "2";}, 4000);
+    setTimeout(function(){questionheader.innerHTML = "1";}, 5000);
+    setTimeout(function(){questionheader.innerHTML = "Get ready!"}, 6000);
+    setTimeout(newQuestion(), 7000);
 }
 
 function newQuestion(){
-    event.preventDefault();
     document.getElementById('questionheader').innerHTML = question[0][0];
     console.log(question[1]);
 }
