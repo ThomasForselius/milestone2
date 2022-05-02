@@ -10,6 +10,7 @@ const playerGenre = document.getElementById('genre');
 var currentQuestion = 0; //keeps track of which question is active
 var heading = document.getElementById('heading');
 var questionheader = document.getElementById('questionheader');
+
 const question = [
     ['What is my name', 'Thomas', 'Johan', 'Anders', 'Stefan', 1],
     ['What language is this written in?', 'html', 'css', 'pytohn', 'js', 2]];
@@ -81,17 +82,16 @@ function createPlayer() {
 }
 
 function countDown(){
-    setTimeout(function(){questionheader.innerHTML = "5";}, 1000);
-    setTimeout(function(){questionheader.innerHTML = "4";}, 2000);
-    setTimeout(function(){questionheader.innerHTML = "3";}, 3000);
-    setTimeout(function(){questionheader.innerHTML = "2";}, 4000);
-    setTimeout(function(){questionheader.innerHTML = "1";}, 5000);
-    setTimeout(function(){questionheader.innerHTML = "Get ready!"}, 6000);
-    setTimeout(newQuestion(), 7000);
+    
+    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 5";}, 1000);
+    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 4";}, 2000);
+    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 3";}, 3000);
+    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 2";}, 4000);
+    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 1";}, 5000);
+    setTimeout(newQuestion(), 6000);
 }
 
 function newQuestion(){
-    document.getElementById('questionheader').innerHTML = question[0][0];
     console.log(question[1]);
 }
 
