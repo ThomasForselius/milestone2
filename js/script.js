@@ -57,6 +57,7 @@ document.getElementById('create').addEventListener('submit', (event) => {
         return;
     }
     else{
+        document.getElementById('createplayerbtn').style.display = 'none';
         createPlayer(); // Call function to fill the variables into the player object
     }
 
@@ -74,7 +75,6 @@ function createPlayer() {
     
     document.getElementById('playerinfo').style.visibility = 'hidden';
     document.getElementById('question').style.visibility = 'visible';
-    //document.getElementById('createplayerbtn').style.visibility = 'hidden';
     document.getElementById('createplayer').className = "createplayer_after";
     countDown();
     scoreboard();
