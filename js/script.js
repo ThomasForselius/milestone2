@@ -11,6 +11,8 @@ const questionPlaceHolder = document.getElementById('questionplaceholder');
 var currentQuestion = 0; //keeps track of which question is active
 var heading = document.getElementById('heading');
 var questionheader = document.getElementById('questionheader');
+var qTemp = "";
+var quest = "";
 
 const question = {
     q:"What is my name?",
@@ -104,17 +106,17 @@ function countDown(){
     setTimeout(function(){newQuestion()}, 6000);
 }
 
-function newQuestion(){
+function newQuestion(event){
+    event.preventDefault();
     console.log(question.q);
     questionheader.innerHTML = question.q;
-    for(let i = 0; question.alt[i] < question.alt.length; i++){
-        console.log(question.alt.length);
-        questionPlaceHolder.innerHTML = `<p class="alt" id="q${i}" value="${question.alt[i]}">${question.alt[i]}</p><br>`;
+    for(let i = 0; i < question.alt.length; i++){
+        console.log("Alternative: " + question.alt[i]);
+        quest = `<p class="alt" id="q${i}" value="${question.alt[i]}">Alt: ${question.alt[i]}</p><br>`;
+        qTemp += quest;
     }
-}
-
-function checkAnswer(){
-
+    questionPlaceHolder.innerHTML = `<article id="questionplaceholder" style="margin-top: -400px; background-color: red">
+     ${qTemp} </article>`;
 }
 
 function updateScore(){
