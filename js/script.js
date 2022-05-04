@@ -7,16 +7,22 @@ var player = {name:"", age:"", genre:"", score:0}; // Declares an object to stor
 const playerName = document.getElementById('name');
 const playerAge = document.getElementById('age');
 const playerGenre = document.getElementById('genre');
+const questionPlaceHolder = document.getElementById('questionplaceholder');
 var currentQuestion = 0; //keeps track of which question is active
 var heading = document.getElementById('heading');
 var questionheader = document.getElementById('questionheader');
 
-const question = [
-    ['What is my name', 'Thomas', 'Johan', 'Anders', 'Stefan', 1],
-    ['What language is this written in?', 'html', 'css', 'pytohn', 'js', 2]];
+const question = {
+    q:"What is my name?",
+    alt:['Thomas', 'Johan', 'Anders', 'Stefan'],
+    answer:"Thomas"
+    
+    // question: "What language is this written in?",
+    // alt: ['html', 'css', 'pytohn', 'js'],
+    // answer: "js"
+};
 
-
-console.log(question[0][0]);
+console.log(question.q);
 
 function startGame() {
     heading.innerHTML = 'Create a player:'; // Changes heading to 'Create a player'
@@ -83,24 +89,28 @@ function createPlayer() {
 
 function countDown(){
     var play = "";
-    
+    questionheader.innerHTML = "";
     if(currentQuestion == 0){
         play = "Get ready to play ";
     }
     else if(currentQuestion != 0){
         play = "Next question ";
     }
-    setTimeout(function(){questionheader.innerHTML = `${play} 5`;}, 1000);
-    setTimeout(function(){questionheader.innerHTML = `${play} 4`;}, 2000);
-    setTimeout(function(){questionheader.innerHTML = `${play} 3`;}, 3000);
-    setTimeout(function(){questionheader.innerHTML = `${play} 2`;}, 4000);
-    setTimeout(function(){questionheader.innerHTML = `${play} 1`;}, 5000);
-    setTimeout(newQuestion(), 6000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 5`;}, 1000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 4`;}, 2000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 3000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 4000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 5000);
+    setTimeout(function(){newQuestion()}, 6000);
 }
 
 function newQuestion(){
-    console.log(question[1]);
-
+    console.log(question.q);
+    questionheader.innerHTML = question.q;
+    for(let i = 0; question.alt[i] < question.alt.length; i++){
+        console.log(question.alt.length);
+        questionPlaceHolder.innerHTML = `<p class="alt" id="q${i}" value="${question.alt[i]}">${question.alt[i]}</p><br>`;
+    }
 }
 
 function checkAnswer(){
