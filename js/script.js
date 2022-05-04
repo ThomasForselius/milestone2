@@ -82,17 +82,25 @@ function createPlayer() {
 }
 
 function countDown(){
+    var play = "";
     
-    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 5";}, 1000);
-    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 4";}, 2000);
-    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 3";}, 3000);
-    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 2";}, 4000);
-    setTimeout(function(){questionheader.innerHTML = "Get ready to play in: 1";}, 5000);
+    if(currentQuestion == 0){
+        play = "Get ready to play ";
+    }
+    else if(currentQuestion != 0){
+        play = "Next question ";
+    }
+    setTimeout(function(){questionheader.innerHTML = `${play} 5`;}, 1000);
+    setTimeout(function(){questionheader.innerHTML = `${play} 4`;}, 2000);
+    setTimeout(function(){questionheader.innerHTML = `${play} 3`;}, 3000);
+    setTimeout(function(){questionheader.innerHTML = `${play} 2`;}, 4000);
+    setTimeout(function(){questionheader.innerHTML = `${play} 1`;}, 5000);
     setTimeout(newQuestion(), 6000);
 }
 
 function newQuestion(){
     console.log(question[1]);
+
 }
 
 function checkAnswer(){
