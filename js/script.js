@@ -98,12 +98,12 @@ function countDown(){
     else if(currentQuestion != 0){
         play = "Next question ";
     }
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 5`;}, 1000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 4`;}, 2000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 3000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 4000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 5000);
-    setTimeout(function(){newQuestion()}, 6000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 5`;}, 400);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 4`;}, 1000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 2000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 3000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 4000);
+    setTimeout(function(){newQuestion()}, 5000);
 }
 
 function newQuestion(event){
@@ -115,7 +115,7 @@ function newQuestion(event){
         quest = `<button class="alt" id="q${i}" value="${question.alt[i]}">Alt: ${question.alt[i]}</button><br>`;
         qTemp += quest;
     }
-    questionPlaceHolder.innerHTML = `<article id="questionplaceholder" style="margin-top: -400px; background-color: red">
+    questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
      ${qTemp} </article>`;
 }
 
