@@ -80,6 +80,7 @@ button:hover {
 
 #questionplaceholder{
     padding-top: 20px;
-    margin-top: -400px;
+    height: 200px;
+    margin-top: -200px;
     text-align: center;
 }
