@@ -84,3 +84,14 @@ button:hover {
     margin-top: -200px;
     text-align: center;
 }
+
+#scores{
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+}
+
+#scorestable{
+    width: 100%;
+    margin: 0 auto;
+}

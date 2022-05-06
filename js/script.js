@@ -121,6 +121,7 @@ function newQuestion(event){
 
 function updateScore(){
 
+    
 }
 
 function scoreboard(){
@@ -128,7 +129,7 @@ function scoreboard(){
     let scores = document.getElementById('scores');
     let html = `
     
-    <table>
+    <table id="scorestable">
         <thead>
             <tr>
                 <td><b>Player Name: </td>
