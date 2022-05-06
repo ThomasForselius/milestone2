@@ -107,7 +107,7 @@ function countDown(){
 }
 
 function newQuestion(event){
-    event.preventDefault();
+    //event.preventDefault();
     console.log(question.q);
     questionheader.innerHTML = question.q;
     for(let i = 0; i < question.alt.length; i++){

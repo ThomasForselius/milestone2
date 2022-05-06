@@ -69,3 +69,11 @@ button:hover {
     opacity: 0%;
     transition: 1s;
 }
+
+.alt{
+    width: 200px;
+    margin: 10px auto;
+    background-color: #c1c1c1;
+    border: 1px solid #333333;
+    padding: 5px 10px;
+}
