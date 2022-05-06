@@ -112,7 +112,7 @@ function newQuestion(event){
     questionheader.innerHTML = question.q;
     for(let i = 0; i < question.alt.length; i++){
         console.log("Alternative: " + question.alt[i]);
-        quest = `<p class="alt" id="q${i}" value="${question.alt[i]}">Alt: ${question.alt[i]}</p><br>`;
+        quest = `<button class="alt" id="q${i}" value="${question.alt[i]}">Alt: ${question.alt[i]}</button><br>`;
         qTemp += quest;
     }
     questionPlaceHolder.innerHTML = `<article id="questionplaceholder" style="margin-top: -400px; background-color: red">
