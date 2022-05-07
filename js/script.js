@@ -14,17 +14,22 @@ var questionheader = document.getElementById('questionheader');
 var qTemp = "";
 var quest = "";
 
-const question = {
-    q:"What is my name?",
-    alt:['Thomas', 'Johan', 'Anders', 'Stefan'],
-    answer:"Thomas"
-    
-    // question: "What language is this written in?",
-    // alt: ['html', 'css', 'pytohn', 'js'],
-    // answer: "js"
-};
+const question = 
+    [
+        {
+            q:"What is my name?",
+            alt:['Thomas', 'Johan', 'Anders', 'Stefan'],
+            answer:"Thomas"
+        },
+        {
+            q: "What language is this written in?",
+            alt: ['html', 'css', 'pytohn', 'js'],
+            answer: "js"
+        }
+    ]
+        ;
 
-console.log(question.q);
+console.log(question[currentQuestion].q);
 
 function startGame() {
     heading.innerHTML = 'Create a player:'; // Changes heading to 'Create a player'
@@ -103,24 +108,38 @@ function countDown(){
     //setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 2000);
     //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 3000);
     //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 4000);
-    setTimeout(function(){newQuestion()}, 5000);
+    setTimeout(function(){newQuestion()},1000);
 }
 
-function newQuestion(event){
-    //event.preventDefault();
-    console.log(question.q);
-    questionheader.innerHTML = question.q;
-    for(let i = 0; i < question.alt.length; i++){
-        console.log("Alternative: " + question.alt[i]);
-        quest = `<button class="alt" id="q${i}" value="${question.alt[i]}" onClick="checkAnswer(${question.alt[i]})">${question.alt[i]}</button><br>`;
+function newQuestion(){
+    
+    qTemp = ""; // clears the variable to fill with new code
+    quest = ""; // clears the variable to fill with new code
+
+    console.log(question[currentQuestion].q);
+    questionheader.innerHTML = question[currentQuestion].q;
+    for(let i = 0; i < question[currentQuestion].alt.length; i++){
+        console.log("Alternative: " + question[currentQuestion].alt[i]);
+        quest = `<button class="alt" value="${question[currentQuestion].alt[i]}" onclick="checkAnswer(${i},'${question[currentQuestion].alt[i]}')">${question[currentQuestion].alt[i]}</button><br>`;
         qTemp += quest;
     }
     questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
      ${qTemp} </article>`;
 }
 
-function checkAnswer(choice){
-    return question;
+function checkAnswer(i, choice){
+    console.log(i);
+    console.log(choice);
+    console.log("correct answer: " + question[currentQuestion].answer);
+    if(question[currentQuestion].answer === choice){
+        alert("Correct answer!");  
+        player.score++;
+        currentQuestion++;
+        setTimeout(function(){newQuestion(currentQuestion)},1000);
+    }
+    else{
+        alert("Wrong, try again");
+    }
 }
 
 function scoreboard(){
