@@ -99,10 +99,10 @@ function countDown(){
         play = "Next question ";
     }
     setTimeout(function(){questionheader.innerHTML = `${play} in: 5`;}, 400);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 4`;}, 1000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 2000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 3000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 4000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 4`;}, 1000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 2000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 3000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 4000);
     setTimeout(function(){newQuestion()}, 5000);
 }
 
@@ -112,16 +112,15 @@ function newQuestion(event){
     questionheader.innerHTML = question.q;
     for(let i = 0; i < question.alt.length; i++){
         console.log("Alternative: " + question.alt[i]);
-        quest = `<button class="alt" id="q${i}" value="${question.alt[i]}">Alt: ${question.alt[i]}</button><br>`;
+        quest = `<button class="alt" id="q${i}" value="${question.alt[i]}" onClick="checkAnswer(${question.alt[i]})">${question.alt[i]}</button><br>`;
         qTemp += quest;
     }
     questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
      ${qTemp} </article>`;
 }
 
-function updateScore(){
-
-    
+function checkAnswer(choice){
+    return question;
 }
 
 function scoreboard(){
