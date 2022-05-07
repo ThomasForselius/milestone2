@@ -128,12 +128,15 @@ function newQuestion(){
 }
 
 function checkAnswer(i, choice){
+
     console.log(i);
     console.log(choice);
     console.log("correct answer: " + question[currentQuestion].answer);
     if(question[currentQuestion].answer === choice){
         alert("Correct answer!");  
-        player.score++;
+        player.score = player.score + 1; 
+        scoreboard(); // Calles the scoreboard function to update current score
+        alert(player.score);
         currentQuestion++;
         setTimeout(function(){newQuestion(currentQuestion)},1000);
     }
