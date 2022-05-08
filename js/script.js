@@ -40,6 +40,8 @@ function startGame() {
 
 function updatePlayer(type){ //gets the type of input to update
     // Updates the name, age or genre in the player card when user types into the input box, depending on what input is being changed
+    playerName.value = playerName.value.replace(/[^a-öA-Ö]*$/g, "");
+    playerAge.value = playerAge.value.replace(/[^0-9]*$/g, "");
     if(type == "name"){ document.getElementById('playerName').innerHTML = 'Name: ' + playerName.value;}
     else if(type == "age"){ document.getElementById('playerAge').innerHTML = 'Age: ' + playerAge.value;}
     else if(type == "genre"){ document.getElementById('playerGenre').innerHTML = 'Genre: ' + playerGenre.value;}
@@ -47,7 +49,7 @@ function updatePlayer(type){ //gets the type of input to update
 }
 
 // function checkName() {
-//     playerName.value = playerName.value.replace(/[^a-z]/g, "");
+//     
 // }
 
 
