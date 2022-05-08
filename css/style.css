@@ -87,7 +87,7 @@ button:hover {
 
 #scores{
     margin: auto;
-    margin-top: 30px;
+    margin-top: 80px;
     text-align: center;
     width: 400px;
 }
@@ -99,8 +99,8 @@ button:hover {
 
 #info{
     text-align: center;
-    margin: -30px auto;
+    margin: -60px auto;
     width: 400px;
-    height: 25px;
+    height: 50px;
     background-color: #cccccc;
 }
