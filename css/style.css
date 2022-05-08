@@ -2,6 +2,8 @@ body {
     padding: 20px;
     font-family: 'Roboto Flex', sans-serif;
     text-align: center;
+    background-image: url(/img/bg.jpg);
+    background-size:cover;
 }
 
 #header{
@@ -12,6 +14,7 @@ body {
 
 .container {
     width: 400px;
+    background-color: #fff;
     height: 400px;
     margin: 0 auto;
     padding: 20px;
