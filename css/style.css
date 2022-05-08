@@ -95,3 +95,10 @@ button:hover {
     width: 100%;
     margin: 0 auto;
 }
+
+#info{
+    margin-top: -400px;
+    width: 400px;
+    height: 250px;
+    background-color: #333333;
+}
