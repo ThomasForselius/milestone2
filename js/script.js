@@ -210,6 +210,11 @@ function checkAnswer(i, choice){
     }
 }
 
+function finishGame(){
+    
+    questionheader.innerHTML = "Congratulations " + player.name + "!"
+}
+
 function scoreboard(){
 
     let scores = document.getElementById('scores');
