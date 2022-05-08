@@ -201,7 +201,6 @@ function checkAnswer(i, choice){
         alert("Correct answer!");  
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
-        alert(player.score);
 
         console.log(currentQuestion);
 
