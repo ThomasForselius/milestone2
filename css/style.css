@@ -110,7 +110,7 @@ body {
 
 #scores{
     margin: auto;
-    margin-top: 80px;
+    margin-top: 90px;
     text-align: center;
     width: 400px;
 }
@@ -122,11 +122,10 @@ body {
 
 #info{
     text-align: center;
-    margin: -60px auto;
+    margin: -80px auto;
     min-width: 200px;
     max-width: 300px;
-    height: 50px;
-    background-color: #cccccc;
+    height: 30px;
 }
 
 h1{
