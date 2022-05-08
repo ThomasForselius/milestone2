@@ -157,10 +157,10 @@ function countDown(){
         play = "Next question ";
     }
     questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 1000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
-    setTimeout(function(){newQuestion()},4000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 200);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
+    setTimeout(function(){newQuestion()},1000);
 }
 
 function newQuestion(){
@@ -230,7 +230,7 @@ function finishGame(){
         Don't worry ${player.name}!<br>Considering your age of ${playerAge}, this is ok! <br>You should stay in school and check out ${playerGenre} history.`;}
 
 
-    questionheader.innerHTML = `You got <h1 style="font-size: 3em">${player.score}</h1> points!`;
+    questionheader.innerHTML = `You got <h1>${player.score}</h1> points!`;
     questionPlaceHolder.innerHTML = html;
 }
 
