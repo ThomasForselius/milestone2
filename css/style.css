@@ -1,6 +1,6 @@
-
 body {
     padding: 20px;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 #header{
@@ -86,7 +86,8 @@ button:hover {
 }
 
 #scores{
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 30px;
     text-align: center;
     width: 400px;
 }
@@ -97,9 +98,9 @@ button:hover {
 }
 
 #info{
-    position: relative;
-    margin: -50px auto;
+    text-align: center;
+    margin: -30px auto;
     width: 400px;
     height: 25px;
-    background-color: #333333;
+    background-color: #cccccc;
 }
