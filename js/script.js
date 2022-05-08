@@ -166,6 +166,7 @@ function countDown(){
 
 function newQuestion(){
     
+    info.innerHTML = "";
     qTemp = ""; // clears the variable to fill with new code
     quest = ""; // clears the variable to fill with new code
     
@@ -216,7 +217,7 @@ function checkAnswer(i, choice){
     }
     else{
         info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
-        setTimeout(function(){newQuestion()}, 1000);
+        setTimeout(function(){countDown()}, 1000);
     }
 }
 
