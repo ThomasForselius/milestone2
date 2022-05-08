@@ -8,6 +8,7 @@ const playerName = document.getElementById('name');
 const playerAge = document.getElementById('age');
 const playerGenre = document.getElementById('genre');
 const questionPlaceHolder = document.getElementById('questionplaceholder');
+const info = document.getElementById('info');
 var currentQuestion = 0; //keeps track of which question is active
 var heading = document.getElementById('heading');
 var questionheader = document.getElementById('questionheader');
@@ -198,7 +199,7 @@ function checkAnswer(i, choice){
     console.log(choice);
     console.log("correct answer: " + qGenre.answer);
     if(qGenre.answer === choice){
-        alert("Correct answer!");  
+        info.innerHTML = "Correct answer!";  
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
 
@@ -214,7 +215,8 @@ function checkAnswer(i, choice){
         }
     }
     else{
-        alert("Wrong, try again");
+        info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
+        setTimeout(function(){newQuestion()}, 1000);
     }
 }
 
