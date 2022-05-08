@@ -97,8 +97,9 @@ button:hover {
 }
 
 #info{
-    margin-top: -400px;
+    position: relative;
+    margin: -50px auto;
     width: 400px;
-    height: 250px;
+    height: 25px;
     background-color: #333333;
 }
