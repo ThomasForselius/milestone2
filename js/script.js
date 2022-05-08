@@ -221,13 +221,13 @@ function checkAnswer(i, choice){
 
 function finishGame(){
     let html = ``; // declares a new value to fill when the game is over
-    if(player.score == 5){html = `${player.name}, that is awesome! Well done! You got all questions correct!`;}
-    else if(player.score == 4){html = `Hey, almost all the way! Just one wrong answer.<br> Better luck next try!`;}
-    else if(player.score == 3){html = `Only 2 wrong answers.<br> Better luck next try!`;}
-    else if(player.score == 2){html = `Well, at least you got two questions correct!`;}
+    if(player.score == 5){html = `${player.name}, that is awesome! Well done!<br> You got all questions correct!`;}
+    else if(player.score == 4){html = `Hey ${player.name}, almost all the way! Just one wrong answer.<br> Better luck next try!`;}
+    else if(player.score == 3){html = `Only 2 wrong answers, ${player.name}.<br> Better luck next try!`;}
+    else if(player.score == 2){html = `Well ${player.name}, at least you got two questions correct!`;}
     else if(player.score < 2 && player.age > 18){html = `No comment mate...<br>You need to brush up on some ${playerGenre} history.`;}
     else if(player.score < 2 && player.age < 15){html = `
-        Don't worry!<br>Considering your age of ${playerAge}, this is ok! <br>You should stay in school and check out ${playerGenre} history.`;}
+        Don't worry ${player.name}!<br>Considering your age of ${playerAge}, this is ok! <br>You should stay in school and check out ${playerGenre} history.`;}
 
 
     questionheader.innerHTML = `You got <h1 style="font-size: 3em">${player.score}</h1> points!`;
@@ -243,7 +243,6 @@ function scoreboard(){
         <thead>
             <tr>
                 <td><b>Player Name: </td>
-                <td><b>Age: </b></td>
                 <td><b>Genre: </b></td>
                 <td><b>Points: </b></td>
             </tr>
@@ -251,7 +250,6 @@ function scoreboard(){
         <tbody>
             <tr>
                 <td>${player.name}</td>
-                <td>${player.age}</td>
                 <td>${player.genre}</td>
                 <td>${player.score}</td>
             </tr>
