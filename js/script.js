@@ -17,14 +17,16 @@ var quest = "";
 const question = 
     [
         {
-            q:"What is my name?",
-            alt:['Thomas', 'Johan', 'Anders', 'Stefan'],
-            answer:"Thomas"
+            q:"Who wrote Highway to Hell?",
+            alt:['Led Zeplin', 'Metallica', 'AC/DC', 'Iron Maiden'],
+            answer:"AC/DC",
+            genre:"Music"
         },
         {
-            q: "What language is this written in?",
-            alt: ['html', 'css', 'pytohn', 'js'],
-            answer: "js"
+            q: "Zlatan comes from what country?",
+            alt: ['Sweden', 'Finland', 'Belgium', 'France'],
+            answer: "Sweden"
+            genre:"Sports"
         }
     ]
         ;
