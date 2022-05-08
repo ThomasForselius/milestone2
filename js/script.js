@@ -13,25 +13,27 @@ var heading = document.getElementById('heading');
 var questionheader = document.getElementById('questionheader');
 var qTemp = "";
 var quest = "";
+var question = "";
 
-const question = 
+const musicQ = 
     [
         {
             q:"Who wrote Highway to Hell?",
             alt:['Led Zeplin', 'Metallica', 'AC/DC', 'Iron Maiden'],
             answer:"AC/DC",
             genre:"Music"
-        },
+        }
+    ];
+
+const sportsQ = 
+    [
         {
             q: "Zlatan comes from what country?",
             alt: ['Sweden', 'Finland', 'Belgium', 'France'],
-            answer: "Sweden"
-            genre:"Sports"
+            answer: "Sweden",
+            genre: "Sports"
         }
-    ]
-        ;
-
-console.log(question[currentQuestion].q);
+    ];
 
 function startGame() {
     heading.innerHTML = 'Create a player:'; // Changes heading to 'Create a player'
@@ -120,7 +122,15 @@ function newQuestion(){
     qTemp = ""; // clears the variable to fill with new code
     quest = ""; // clears the variable to fill with new code
 
+    if(playerGenre === "Music"){
+       let question = musicQ;
+    }
+    else if(playerGenre === "Sports"){
+        let question = sportsQ;
+    }
+
     console.log(question[currentQuestion].q);
+
     questionheader.innerHTML = question[currentQuestion].q;
     for(let i = 0; i < question[currentQuestion].alt.length; i++){
         console.log("Alternative: " + question[currentQuestion].alt[i]);
