@@ -1,6 +1,7 @@
 body {
     padding: 20px;
     font-family: 'Roboto Flex', sans-serif;
+    text-align: center;
 }
 
 #header{
@@ -50,7 +51,7 @@ body {
 button { 
     width: 250px;
     text-align: center;
-    padding: 5px 20px;
+    padding: 15px 30px;
     margin: 0 auto;
     background-color: #e1e1e1;
     transition: 0.3s ease-out;
