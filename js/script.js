@@ -185,7 +185,7 @@ function newQuestion(){
     questionheader.innerHTML = qGenre.q;
     for(let i = 0; i < qGenre.alt.length; i++){
         console.log("Alternative: " + qGenre.alt[i]);
-        quest = `<button class="alt" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')">${qGenre.alt[i]}</button><br>`;
+        quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')">${qGenre.alt[i]}</button><br>`;
         qTemp += quest;
     }
     questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
