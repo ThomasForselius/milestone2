@@ -167,6 +167,7 @@ function countDown(){
 function newQuestion(){
     
     info.innerHTML = "";
+    
     qTemp = ""; // clears the variable to fill with new code
     quest = ""; // clears the variable to fill with new code
     

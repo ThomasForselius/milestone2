@@ -120,6 +120,11 @@ body {
     margin: 0 auto;
 }
 
+td{
+    display: inline-block;
+    width: 100px;
+}
+
 #info{
     text-align: center;
     margin: -80px auto;
