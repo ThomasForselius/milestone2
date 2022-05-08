@@ -48,6 +48,10 @@ body {
     font-size: 1.5em;
 }
 
+#heading{
+    font-size: 1.5em;
+}
+
 button { 
     width: 250px;
     text-align: center;
@@ -55,13 +59,27 @@ button { 
     margin: 0 auto;
     background-color: #e1e1e1;
     transition: 0.3s ease-out;
-    border: 1px solid white;
+    border: none;
     border-radius: 20px;
 }
 
 button:hover {
     background-color: #c1c1c1;
     transition: 0.3s ease-in;
+}
+.form{
+    margin: 0 auto;
+}
+.label{
+    width: 150px;
+    margin: 2px auto;
+    display: block;
+}
+
+.input{
+    width: 150px;
+    margin: 2px;
+    border: 1px solid #333333;
 }
 
 .createplayer_after {
