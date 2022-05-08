@@ -13,7 +13,8 @@ var heading = document.getElementById('heading');
 var questionheader = document.getElementById('questionheader');
 var qTemp = "";
 var quest = "";
-var question = "";
+var qGenre = [];
+var play = "";
 
 const musicQ = 
     [
@@ -21,6 +22,30 @@ const musicQ =
             q:"Who wrote Highway to Hell?",
             alt:['Led Zeplin', 'Metallica', 'AC/DC', 'Iron Maiden'],
             answer:"AC/DC",
+            genre:"Music"
+        },
+        {
+            q:"Who wrote Bohemian Rapsody?",
+            alt:['Beetles', 'Queen', 'Billy Connolly', 'Hans Zimmer'],
+            answer:"Queen",
+            genre:"Music"
+        },
+        {
+            q:"What the lead Singers name in Metallica?",
+            alt:['Bobby', 'Randy', 'James', 'Hans'],
+            answer:"James",
+            genre:"Music"
+        },
+        {
+            q:"What color was the beetles submarine?",
+            alt:['Yellow', 'Red', 'Green', 'Black'],
+            answer:"Yellow",
+            genre:"Music"
+        },
+        {
+            q:"How was this quiz?",
+            alt:['Good', 'OK', 'Somewhat ok', 'Meh'],
+            answer:"Somewhat ok",
             genre:"Music"
         }
     ];
@@ -32,14 +57,37 @@ const sportsQ =
             alt: ['Sweden', 'Finland', 'Belgium', 'France'],
             answer: "Sweden",
             genre: "Sports"
+        },
+        {
+            q: "What country playes Football?",
+            alt: ['Sweden', 'USA', 'Belgium', 'France'],
+            answer: "USA",
+            genre: "Sports"
+        },
+        {
+            q: "Where was cricket invented?",
+            alt: ['Great Brittain', 'France', 'Italy', 'China'],
+            answer: "Great Brittain",
+            genre: "Sports"
+        },
+        {
+            q: "In what sport do you ride on waves with a board?",
+            alt: ['Skateboarding', 'Sailing', 'Tennis', 'Surfing'],
+            answer: "Surfing",
+            genre: "Sports"
+        },
+        {
+            q: "What colors are on a generic soccer ball?",
+            alt: ['Plain white', 'Red and Blue', 'Black and White', 'Black and Blue'],
+            answer: "Black and White",
+            genre: "Sports"
         }
     ];
 
-function startGame() {
+function startGame(){
     heading.innerHTML = 'Create a player:'; // Changes heading to 'Create a player'
     let rules = document.getElementById('rules').className = "rules_after"; // Rules fade & slide away to reveal 'Create a player' page, using class name 'rules_after'
     console.log('start game');
-    //return;
 }
 
 function updatePlayer(type){ //gets the type of input to update
@@ -101,42 +149,43 @@ function createPlayer() {
 }
 
 function countDown(){
-    var play = "";
     questionheader.innerHTML = "";
     if(currentQuestion == 0){
         play = "Get ready to play ";
     }
-    else if(currentQuestion != 0){
+    else if(currentQuestion > 0){
         play = "Next question ";
     }
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 5`;}, 400);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 4`;}, 1000);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 2000);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 3000);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 4000);
-    setTimeout(function(){newQuestion()},1000);
+    questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 1000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
+    setTimeout(function(){newQuestion()},4000);
 }
 
 function newQuestion(){
     
     qTemp = ""; // clears the variable to fill with new code
     quest = ""; // clears the variable to fill with new code
-
-    var q ="";
-
-    if(playerGenre === "Music"){
-       q = musicQ;
+    
+    console.log(player.genre);
+    
+    if(player.genre == 'Music'){
+       qGenre = musicQ[currentQuestion];
+       console.log("Music question: " + qGenre.q);
     }
-    else if(playerGenre === "Sports"){
-       q = sportsQ;
+    else if(player.genre == 'Sports'){
+       qGenre = sportsQ[currentQuestion];
+       console.log("Sports question: " + qGenre.q);
+    }
+    else{
+        questionheader.innerHTML = "No genre chosen, please try again.";
     }
 
-    console.log(q);
-
-    questionheader.innerHTML = question[currentQuestion].q;
-    for(let i = 0; i < question[currentQuestion].alt.length; i++){
-        console.log("Alternative: " + question[currentQuestion].alt[i]);
-        quest = `<button class="alt" value="${question[currentQuestion].alt[i]}" onclick="checkAnswer(${i},'${question[currentQuestion].alt[i]}')">${question[currentQuestion].alt[i]}</button><br>`;
+    questionheader.innerHTML = qGenre.q;
+    for(let i = 0; i < qGenre.alt.length; i++){
+        console.log("Alternative: " + qGenre.alt[i]);
+        quest = `<button class="alt" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')">${qGenre.alt[i]}</button><br>`;
         qTemp += quest;
     }
     questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
@@ -147,14 +196,14 @@ function checkAnswer(i, choice){
 
     console.log(i);
     console.log(choice);
-    console.log("correct answer: " + question[currentQuestion].answer);
-    if(question[currentQuestion].answer === choice){
+    console.log("correct answer: " + qGenre.answer);
+    if(qGenre.answer === choice){
         alert("Correct answer!");  
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
         alert(player.score);
         currentQuestion++;
-        setTimeout(function(){newQuestion(currentQuestion)},1000);
+        countDown();
     }
     else{
         alert("Wrong, try again");
