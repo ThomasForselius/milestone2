@@ -122,14 +122,16 @@ function newQuestion(){
     qTemp = ""; // clears the variable to fill with new code
     quest = ""; // clears the variable to fill with new code
 
+    var q ="";
+
     if(playerGenre === "Music"){
-       let question = musicQ;
+       q = musicQ;
     }
     else if(playerGenre === "Sports"){
-        let question = sportsQ;
+       q = sportsQ;
     }
 
-    console.log(question[currentQuestion].q);
+    console.log(q);
 
     questionheader.innerHTML = question[currentQuestion].q;
     for(let i = 0; i < question[currentQuestion].alt.length; i++){
