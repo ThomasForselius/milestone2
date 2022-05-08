@@ -55,10 +55,10 @@ body {
     font-size: 1.5em;
 }
 
-button { 
-    width: 250px;
+.button { 
+    width: 150px;
     text-align: center;
-    padding: 15px 30px;
+    padding: 10px 20px;
     margin: 0 auto;
     background-color: #ffccbb;
     transition: 0.3s ease-out;
@@ -66,8 +66,8 @@ button { 
     border-radius: 20px;
 }
 
-button:hover {
-    background-color: #c1c1c1;
+.button:hover {
+    background-color: #2dc2a7;
     transition: 0.3s ease-in;
 }
 .form{
@@ -83,6 +83,7 @@ button:hover {
     width: 150px;
     margin: 2px;
     border: 1px solid #333333;
+    text-align: center;
 }
 
 .createplayer_after {
