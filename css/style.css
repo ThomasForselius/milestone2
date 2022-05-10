@@ -108,20 +108,23 @@ body {
 }
 
 #scores{
-    margin: 0 auto;
+    visibility: hidden;
+    margin: 10px auto;
     margin-top: 65px;
     text-align: center;
-    max-width: 490px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    max-width: 400px;
 }
 
 #scorestable{
     margin: 0 auto;
-    width: 100vw;
     text-align: center;
 }
 
+table{
+    width: 350px;
+}
 td{
     min-width: 80px;
     max-width: 120px;
@@ -158,7 +161,6 @@ h1{
     }
     
     #scores{
-        visibility: hidden;
         position: absolute;
         bottom: 0px;
         width: 100%;
