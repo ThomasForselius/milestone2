@@ -245,9 +245,9 @@ function scoreboard(){
     <table id="scorestable">
         <thead>
             <tr>
-                <td><b>Name: </td>
-                <td><b>Genre: </b></td>
-                <td><b>Points: </b></td>
+                <td><b><u>Name: </b></u></td>
+                <td><b><u>Genre: </b></u></td>
+                <td><b><u>Points: </b></u></td>
             </tr>
         </thead>
         <tbody>
