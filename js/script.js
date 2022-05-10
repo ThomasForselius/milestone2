@@ -151,6 +151,7 @@ function createPlayer() {
 }
 
 function countDown(){
+    info.innerHTML = "";
     questionheader.innerHTML = "";
     if(currentQuestion == 0){
         play = "Get ready to play ";
@@ -232,6 +233,7 @@ function checkAnswer(i, choice){
 }
 
 function finishGame(){
+    info.innerHTML = "";
     questionPlaceHolder.innerHTML = "";
     let html = ``; // declares a new value to fill when the game is over
     if(player.score == 5){html = `${player.name}, that is awesome! Well done!<br> You got all questions correct!`;}
