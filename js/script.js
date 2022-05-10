@@ -154,6 +154,9 @@ function countDown(){
     else if(currentQuestion > 0){
         play = "Next question ";
     }
+    else if(currentQuestion == 5){
+        finishGame();
+    }
     questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
     setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 200);
     //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
@@ -163,33 +166,39 @@ function countDown(){
 
 function newQuestion(){
     
-    info.innerHTML = "";
-
-    qTemp = ""; // clears the variable to fill with new code
-    quest = ""; // clears the variable to fill with new code
-    
-    console.log(player.genre);
-    
-    if(player.genre == 'Music'){
-       qGenre = musicQ[currentQuestion];
-       console.log("Music question: " + qGenre.q);
-    }
-    else if(player.genre == 'Sports'){
-       qGenre = sportsQ[currentQuestion];
-       console.log("Sports question: " + qGenre.q);
+    if(currentQuestion == 5){ // Checks if it's the last question and runs finishGame if true
+       finishGame();
     }
     else{
-        questionheader.innerHTML = "No genre chosen, please try again.";
-    }
 
-    questionheader.innerHTML = qGenre.q;
-    for(let i = 0; i < qGenre.alt.length; i++){
-        console.log("Alternative: " + qGenre.alt[i]);
-        quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
-        qTemp += quest;
+        info.innerHTML = ""; // Clears info placeholder text
+
+        qTemp = ""; // clears the variable to fill with new code
+        quest = ""; // clears the variable to fill with new code
+        
+        console.log(player.genre);
+        
+        if(player.genre == 'Music'){
+        qGenre = musicQ[currentQuestion];
+        console.log("Music question: " + qGenre.q);
+        }
+        else if(player.genre == 'Sports'){
+        qGenre = sportsQ[currentQuestion];
+        console.log("Sports question: " + qGenre.q);
+        }
+        else{
+            questionheader.innerHTML = "No genre chosen, please try again.";
+        }
+
+        questionheader.innerHTML = qGenre.q;
+        for(let i = 0; i < qGenre.alt.length; i++){
+            console.log("Alternative: " + qGenre.alt[i]);
+            quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
+            qTemp += quest;
+        }
+        questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
+        ${qTemp} </article>`;
     }
-    questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
-     ${qTemp} </article>`;
 }
 
 function checkAnswer(i, choice){
@@ -204,27 +213,25 @@ function checkAnswer(i, choice){
     console.log(i);
     console.log(choice);
     console.log("correct answer: " + qGenre.answer);
+    
     if(qGenre.answer === choice){
         info.innerHTML = "Correct answer!";  
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
-
         console.log(currentQuestion);
-
-        if(currentQuestion == 4){ // Checks if it's the last question 
-            questionPlaceHolder.innerHTML = `<article id="questionplaceholder"></article>`;
-            finishGame(); // If it's the last question the game calles finishGame() function;
-        }
-        else{
-            currentQuestion++;
-            setTimeout(function(){countDown()}, 1000);
-        }
-    }
-    else{
-        info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
-        setTimeout(function(){countDown()}, 1000);
         currentQuestion++;
+        setTimeout(function(){countDown()}, 1000);
     }
+    else if(currentQuestion < 4){
+        info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
+        currentQuestion++;
+        setTimeout(function(){countDown()}, 1000);
+    }
+    else{ // If it's the last question, it calls finishGame function
+        questionheader.innerHTML = "<h1>Game complete!</h1>";
+        questionPlaceHolder.innerHTML = "";
+        setTimeout(function(){finishGame()}, 2000);
+     }
 }
 
 function finishGame(){
@@ -235,13 +242,14 @@ function finishGame(){
     else if(player.score == 4){html = `Hey ${player.name}, almost all the way! Just one wrong answer.<br> Better luck next try!`;}
     else if(player.score == 3){html = `Only 2 wrong answers, ${player.name}.<br> Better luck next try!`;}
     else if(player.score == 2){html = `Well ${player.name}, at least you got two questions correct!`;}
-    else if(player.score < 2 && player.age > 18){html = `No comment mate...<br>You need to brush up on some ${playerGenre} history.`;}
+    else if(player.score < 2 && player.age > 18){html = `No comment mate...<br>You need to brush up on some ${player.genre} history.`;}
     else if(player.score < 2 && player.age < 15){html = `
-        Don't worry ${player.name}!<br>Considering your age of ${playerAge}, this is ok! <br>You should stay in school and check out ${playerGenre} history.`;}
+        Don't worry ${player.name}!<br>Considering your age of ${player.age}, this is ok! <br>You should stay in school and check out ${player.genre} history.`;}
 
 
     questionheader.innerHTML = `You got <h1>${player.score}</h1> points!`;
     questionPlaceHolder.innerHTML = html;
+    
 }
 
 function scoreboard(){
