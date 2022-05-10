@@ -134,12 +134,15 @@ function countDown(){ // num is a boolean to check if the game needs to restart
 
     if(currentQuestion === 0){play = "Get ready to play ";}
     else if(currentQuestion > 0){play = "Next question ";}
-    else if(currentQuestion === 4){finishGame();}
+    
+    if(currentQuestion === 5){finishGame();}
+    else{
     questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
     setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 500);
     setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 1500);
     setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 2500);
     setTimeout(function(){newQuestion()},3500);
+    }
 }
 
 function newQuestion(){
