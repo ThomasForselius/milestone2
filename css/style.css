@@ -6,14 +6,7 @@ body {
     background-size:cover;
 }
 
-#header{
-    text-align: center;
-    font-size: 2em;
-    text-decoration: underline;
-}
-
 .container {
-    min-width: 280px;
     max-width: 450px;
     background-color: #fff;
     height: 400px;
@@ -22,6 +15,12 @@ body {
     border: 1px solid black;
     border-radius: 20px;
     overflow: hidden;
+}
+
+#header{
+    text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
 }
 
 .rules{
@@ -138,4 +137,29 @@ h1{
     margin: 0px;
     line-height: -50%;
     border: 1px solid #ffccbb;
+}
+
+/* Media query for mobile devices */
+
+@media screen and (max-width: 400px) { 
+    body {
+      background-color: white;
+      background-image: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container{
+        border: none;
+    }
+
+    #scores{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 50px;
+        margin-left: 0px;
+        padding: 10px;
+        background-color: #61efd5;
+    }
 }
