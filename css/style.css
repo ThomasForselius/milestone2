@@ -117,13 +117,14 @@ body {
 }
 
 #scorestable{
-    width: 100vw;
     margin: 0 auto;
+    width: 100vw;
+    text-align: center;
 }
 
 td{
-    display: inline-block;
-    width: 100px;
+    min-width: 80px;
+    max-width: 120px;
     padding: 5px;
 }
 
@@ -158,14 +159,18 @@ h1{
     }
     
     #scores{
+        visibility: hidden;
         position: absolute;
         bottom: 0px;
         width: 100%;
-        height: 100px;
+        height: 80px;
         margin-left: 0px;
         padding: 20px 0;
         border-radius: 0px;
-        background-color: #2dc2a7;
+        background-color: #69ead2;
+    }
+    table, thead, td{
+        width: 70px;
     }
     
 }

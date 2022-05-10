@@ -146,6 +146,7 @@ function createPlayer() {
     document.getElementById('createplayer').className = "createplayer_after";
     countDown();
     scoreboard();
+    document.getElementById('scores').style.visibility =  "visible";
 
 }
 
