@@ -117,9 +117,7 @@ document.getElementById('create').addEventListener('submit', (event) => {
         document.getElementById('createplayerbtn').style.display = 'none';
         createPlayer(); // Call function to fill the variables into the player object
     }
-
 })
-
 
 function createPlayer() {
 
