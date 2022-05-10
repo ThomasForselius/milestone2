@@ -1,4 +1,5 @@
-//----- Default displayed text when page is loaded ----- //
+//----- Default displayed text in console when page is loaded ----- // 
+
 document.addEventListener('DOMContentLoaded', function(){ console.log('Game loaded'); });
 
 // ----- Defining variabels used in game ----- //
@@ -17,7 +18,7 @@ var quest = "";
 var qGenre = [];
 var play = "";
 
-const musicQ = 
+const musicQ =  //Questions and answers for Music genre
     [
         {
             q:"Who wrote Highway to Hell?",
@@ -51,7 +52,7 @@ const musicQ =
         }
     ];
 
-const sportsQ = 
+const sportsQ = //Questions and answers for Sports genre
     [
         {
             q: "Zlatan comes from what country?",
@@ -83,7 +84,6 @@ const sportsQ =
 function startGame(){
     heading.innerHTML = 'Create a player:'; // Changes heading to 'Create a player'
     let rules = document.getElementById('rules').className = "rules_after"; // Rules fade & slide away to reveal 'Create a player' page, using class name 'rules_after'
-    console.log('start game');
 }
 
 function updatePlayer(type){ //gets the type of input to update
@@ -93,17 +93,11 @@ function updatePlayer(type){ //gets the type of input to update
     if(type == "name"){ document.getElementById('playerName').innerHTML = 'Name: ' + playerName.value;}
     else if(type == "age"){ document.getElementById('playerAge').innerHTML = 'Age: ' + playerAge.value;}
     else if(type == "genre"){ document.getElementById('playerGenre').innerHTML = 'Genre: ' + playerGenre.value;}
-    console.log(`update ${player.name}`);
 }
-
-// function checkName() {
-//     
-// }
-
 
 document.getElementById('create').addEventListener('submit', (event) => {
 
-        event.preventDefault();
+    event.preventDefault();
     if(playerName.value == "" || playerName.value == null){
         playerName.style.border="1px solid red";
         playerName.focus();
@@ -129,13 +123,10 @@ document.getElementById('create').addEventListener('submit', (event) => {
 
 function createPlayer() {
 
-    console.log('player created');
     player.name = playerName.value;
     player.age = playerAge.value;
     player.genre = playerGenre.value;
-    
-    console.log(player);
-    
+
     document.getElementById('playerinfo').style.visibility = 'hidden';
     document.getElementById('question').style.visibility = 'visible';
     document.getElementById('createplayer').className = "createplayer_after";
@@ -158,10 +149,10 @@ function countDown(){
         finishGame();
     }
     questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 200);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
-    setTimeout(function(){newQuestion()},1000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 1000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
+    setTimeout(function(){newQuestion()},3500);
 }
 
 function newQuestion(){
@@ -176,23 +167,12 @@ function newQuestion(){
         qTemp = ""; // clears the variable to fill with new code
         quest = ""; // clears the variable to fill with new code
         
-        console.log(player.genre);
-        
-        if(player.genre == 'Music'){
-        qGenre = musicQ[currentQuestion];
-        console.log("Music question: " + qGenre.q);
-        }
-        else if(player.genre == 'Sports'){
-        qGenre = sportsQ[currentQuestion];
-        console.log("Sports question: " + qGenre.q);
-        }
-        else{
-            questionheader.innerHTML = "No genre chosen, please try again.";
-        }
+        if(player.genre == 'Music'){qGenre = musicQ[currentQuestion];}
+        else if(player.genre == 'Sports'){qGenre = sportsQ[currentQuestion];}
+        else{questionheader.innerHTML = "No genre chosen, please try again.";}
 
         questionheader.innerHTML = qGenre.q;
         for(let i = 0; i < qGenre.alt.length; i++){
-            console.log("Alternative: " + qGenre.alt[i]);
             quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
             qTemp += quest;
         }
@@ -208,17 +188,11 @@ function checkAnswer(i, choice){
     document.getElementById('btn2').disabled = true;
     document.getElementById('btn3').disabled = true;
     document.getElementById('btn0').disabled = true;
-    console.log("buttons disabled");
-    
-    console.log(i);
-    console.log(choice);
-    console.log("correct answer: " + qGenre.answer);
     
     if(qGenre.answer === choice){
         info.innerHTML = "Correct answer!";  
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
-        console.log(currentQuestion);
         currentQuestion++;
         setTimeout(function(){countDown()}, 1000);
     }
@@ -246,17 +220,15 @@ function finishGame(){
     else if(player.score < 2 && player.age < 15){html = `
         Don't worry ${player.name}!<br>Considering your age of ${player.age}, this is ok! <br>You should stay in school and check out ${player.genre} history.`;}
 
-
     questionheader.innerHTML = `You got <h1>${player.score}</h1> points!`;
     questionPlaceHolder.innerHTML = html;
-    
+
 }
 
 function scoreboard(){
 
     let scores = document.getElementById('scores');
-    let html = `
-    
+    let html = `    
     <table id="scorestable">
         <thead>
             <tr>
@@ -272,10 +244,7 @@ function scoreboard(){
                 <td>${player.score}</td>
             </tr>
         </tbody>
-    
     </table>
-
     `;
     document.getElementById('scores').innerHTML = html; 
-    console.log('scores');
 }
