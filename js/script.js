@@ -23,32 +23,27 @@ const musicQ =  //Questions and answers for Music genre
         {
             q:"Who wrote Highway to Hell?",
             alt:['Led Zeplin', 'Metallica', 'AC/DC', 'Iron Maiden'],
-            answer:"AC/DC",
-            genre:"Music"
+            answer:"AC/DC"
         },
         {
             q:"Who wrote Bohemian Rapsody?",
             alt:['Beetles', 'Queen', 'Billy Connolly', 'Hans Zimmer'],
-            answer:"Queen",
-            genre:"Music"
+            answer:"Queen"
         },
         {
             q:"What the lead Singers name in Metallica?",
             alt:['Bobby', 'Randy', 'James', 'Hans'],
-            answer:"James",
-            genre:"Music"
+            answer:"James"
         },
         {
             q:"What color was the beetles submarine?",
             alt:['Yellow', 'Red', 'Green', 'Black'],
-            answer:"Yellow",
-            genre:"Music"
+            answer:"Yellow"
         },
         {
-            q:"How was this quiz?",
-            alt:['Good', 'OK', 'Somewhat ok', 'Meh'],
-            answer:"Somewhat ok",
-            genre:"Music"
+            q:"What color was the rain?",
+            alt:['White', 'Transparent', 'Black', 'Purple'],
+            answer:"Purple"
         }
     ];
 
@@ -88,8 +83,8 @@ function startGame(){
 
 function updatePlayer(type){ //gets the type of input to update
     // Updates the name, age or genre in the player card when user types into the input box, depending on what input is being changed
-    playerName.value = playerName.value.replace(/[^a-öA-Ö]*$/g, "");
-    playerAge.value = playerAge.value.replace(/[^0-9]*$/g, "");
+    playerName.value = playerName.value.replace(/[^a-öA-Ö]*$/g, ""); // Checks name for only alphabet characters A-Ö and a-ö, and replaces anything else
+    playerAge.value = playerAge.value.replace(/[^0-9]*$/g, ""); // Checks age characters and rejects anything that isn't a number
     if(type == "name"){ document.getElementById('playerName').innerHTML = 'Name: ' + playerName.value;}
     else if(type == "age"){ document.getElementById('playerAge').innerHTML = 'Age: ' + playerAge.value;}
     else if(type == "genre"){ document.getElementById('playerGenre').innerHTML = 'Genre: ' + playerGenre.value;}
@@ -122,48 +117,36 @@ document.getElementById('create').addEventListener('submit', (event) => {
 
 function createPlayer() {
 
-    player.name = playerName.value;
-    player.age = playerAge.value;
-    player.genre = playerGenre.value;
-
-    document.getElementById('playerinfo').style.visibility = 'hidden';
+    player.name = playerName.value; // fills player name with value from form
+    player.age = playerAge.value; // fills player age with value from form
+    player.genre = playerGenre.value; // fills player genre with value from form
+    document.getElementById('playerinfo').style.visibility = 'hidden'; // hides player info 
     document.getElementById('question').style.visibility = 'visible';
-    document.getElementById('createplayer').className = "createplayer_after";
+    document.getElementById('createplayer').className = "createplayer_after"; // fades away create a player page
     countDown();
     scoreboard();
-    document.getElementById('scores').style.visibility =  "visible";
-
+    document.getElementById('scores').style.visibility =  "visible"; // shows scoreboard at the bottom of page
 }
 
 function countDown(){ // num is a boolean to check if the game needs to restart
     info.innerHTML = "";
     questionheader.innerHTML = "";
 
-    if(currentQuestion === 0){
-        play = "Get ready to play ";
-    }
-    else if(currentQuestion > 0){
-        play = "Next question ";
-    }
-    else if(currentQuestion === 5){
-        finishGame();
-    }
+    if(currentQuestion === 0){play = "Get ready to play ";}
+    else if(currentQuestion > 0){play = "Next question ";}
+    else if(currentQuestion === 5){finishGame();}
     questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 1000);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
-    //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
-    setTimeout(function(){newQuestion()},1500);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 500);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 1500);
+    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 2500);
+    setTimeout(function(){newQuestion()},3500);
 }
 
 function newQuestion(){
     
-    if(currentQuestion == 5){ // Checks if it's the last question and runs finishGame if true
-       finishGame();
-    }
+    if(currentQuestion == 5){finishGame();} // Checks if it's the last question and runs finishGame if true
     else{
-
         info.innerHTML = ""; // Clears info placeholder text
-
         qTemp = ""; // clears the variable to fill with new code
         quest = ""; // clears the variable to fill with new code
         
@@ -223,8 +206,6 @@ function finishGame(){
 
     questionheader.innerHTML = `You got <h1>${player.score}</h1> points!`;
     questionPlaceHolder.innerHTML = html;
-
-
 }
 
 function scoreboard(){
