@@ -58,7 +58,7 @@ body {
     width: 150px;
     text-align: center;
     padding: 10px 20px;
-    margin: 0 auto;
+    margin: 5px auto;
     background-color: #ffccbb;
     transition: 0.3s ease-out;
     border: none;
@@ -108,10 +108,11 @@ body {
 }
 
 #scores{
-    margin: auto;
+    margin: 0 auto;
     margin-top: 70px;
     text-align: center;
-    width: 400px;
+    max-width: 490px;
+    background-color: #2dc2a7;
 }
 
 #scorestable{
