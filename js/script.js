@@ -245,7 +245,7 @@ function scoreboard(){
     <table id="scorestable">
         <thead>
             <tr>
-                <td><b>Player Name: </td>
+                <td><b>Name: </td>
                 <td><b>Genre: </b></td>
                 <td><b>Points: </b></td>
             </tr>
