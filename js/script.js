@@ -57,31 +57,26 @@ const sportsQ =
             q: "Zlatan comes from what country?",
             alt: ['Sweden', 'Finland', 'Belgium', 'France'],
             answer: "Sweden",
-            genre: "Sports"
         },
         {
             q: "What country playes Football?",
             alt: ['Sweden', 'USA', 'Belgium', 'France'],
             answer: "USA",
-            genre: "Sports"
         },
         {
             q: "Where was cricket invented?",
             alt: ['Great Brittain', 'France', 'Italy', 'China'],
             answer: "Great Brittain",
-            genre: "Sports"
         },
         {
             q: "In what sport do you ride on waves with a board?",
             alt: ['Skateboarding', 'Sailing', 'Tennis', 'Surfing'],
             answer: "Surfing",
-            genre: "Sports"
         },
         {
             q: "What colors are on a generic soccer ball?",
             alt: ['Plain white', 'Red and Blue', 'Black and White', 'Black and Blue'],
             answer: "Black and White",
-            genre: "Sports"
         }
     ];
 
