@@ -189,7 +189,7 @@ function newQuestion(){
     questionheader.innerHTML = qGenre.q;
     for(let i = 0; i < qGenre.alt.length; i++){
         console.log("Alternative: " + qGenre.alt[i]);
-        quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')">${qGenre.alt[i]}</button><br>`;
+        quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
         qTemp += quest;
     }
     questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
@@ -197,7 +197,14 @@ function newQuestion(){
 }
 
 function checkAnswer(i, choice){
-
+    
+    //After a button is clicked, all buttons are diabled to prevent cheating
+    document.getElementById('btn1').disabled = true;
+    document.getElementById('btn2').disabled = true;
+    document.getElementById('btn3').disabled = true;
+    document.getElementById('btn0').disabled = true;
+    console.log("buttons disabled");
+    
     console.log(i);
     console.log(choice);
     console.log("correct answer: " + qGenre.answer);
@@ -214,16 +221,18 @@ function checkAnswer(i, choice){
         }
         else{
             currentQuestion++;
-            countDown();
+            setTimeout(function(){countDown()}, 1000);
         }
     }
     else{
         info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
         setTimeout(function(){countDown()}, 1000);
+        currentQuestion++;
     }
 }
 
 function finishGame(){
+    questionPlaceHolder.innerHTML = "";
     let html = ``; // declares a new value to fill when the game is over
     if(player.score == 5){html = `${player.name}, that is awesome! Well done!<br> You got all questions correct!`;}
     else if(player.score == 4){html = `Hey ${player.name}, almost all the way! Just one wrong answer.<br> Better luck next try!`;}
