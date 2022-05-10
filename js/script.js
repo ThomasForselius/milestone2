@@ -103,9 +103,10 @@ document.getElementById('create').addEventListener('submit', (event) => {
         playerName.focus();
         return;
     }
-    if(playerAge.value == ""){
+    if(playerAge.value == "" || playerAge.value < 5){
         playerAge.style.border="1px solid red";
         playerAge.focus();
+        alert("You must enter an age - 5 or higher to play!")
         return;
     }
     if(playerGenre.value == ""){
@@ -134,23 +135,24 @@ function createPlayer() {
 
 }
 
-function countDown(){
+function countDown(){ // num is a boolean to check if the game needs to restart
     info.innerHTML = "";
     questionheader.innerHTML = "";
-    if(currentQuestion == 0){
+
+    if(currentQuestion === 0){
         play = "Get ready to play ";
     }
     else if(currentQuestion > 0){
         play = "Next question ";
     }
-    else if(currentQuestion == 5){
+    else if(currentQuestion === 5){
         finishGame();
     }
     questionPlaceHolder.innerHTML = ""; // clear the question alternatives before loading new ones 
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 1000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
-    setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
-    setTimeout(function(){newQuestion()},3500);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 1000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 2000);
+    //setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 3000);
+    setTimeout(function(){newQuestion()},1500);
 }
 
 function newQuestion(){
@@ -171,7 +173,7 @@ function newQuestion(){
 
         questionheader.innerHTML = qGenre.q;
         for(let i = 0; i < qGenre.alt.length; i++){
-            quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer(${i},'${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
+            quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer('${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
             qTemp += quest;
         }
         questionPlaceHolder.innerHTML = `<article id="questionplaceholder">
@@ -179,7 +181,7 @@ function newQuestion(){
     }
 }
 
-function checkAnswer(i, choice){
+function checkAnswer(choice){
     
     //After a button is clicked, all buttons are diabled to prevent cheating
     document.getElementById('btn1').disabled = true;
@@ -200,15 +202,16 @@ function checkAnswer(i, choice){
         setTimeout(function(){countDown()}, 1000);
     }
     else{ // If it's the last question, it calls finishGame function
-        questionheader.innerHTML = "<h1>Game complete!</h1>";
+        questionheader.innerHTML = "<h2>Game complete!</h2>";
         questionPlaceHolder.innerHTML = "";
-        setTimeout(function(){finishGame()}, 2000);
+        setTimeout(function(){finishGame()}, 1500);
      }
 }
 
 function finishGame(){
     info.innerHTML = "";
     questionPlaceHolder.innerHTML = "";
+    info.innerHTML =`<button class="button" onclick="window.location.reload()">Play again!</button>`;
     let html = ``; // declares a new value to fill when the game is over
     if(player.score == 5){html = `${player.name}, that is awesome! Well done!<br> You got all questions correct!`;}
     else if(player.score == 4){html = `Hey ${player.name}, almost all the way! Just one wrong answer.<br> Better luck next try!`;}
@@ -220,6 +223,7 @@ function finishGame(){
 
     questionheader.innerHTML = `You got <h1>${player.score}</h1> points!`;
     questionPlaceHolder.innerHTML = html;
+
 
 }
 
