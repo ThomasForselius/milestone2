@@ -114,11 +114,10 @@ This is a countdown timer preceeding every question so the user gets 3 seconds t
 
 ![Countdown](https://thomasforselius.github.io/milestone2/img/countdown_splash.png)
 
-* Results ; displays the current standings of the active game you are participating in. 
-    At the moment this feature is a work in progress since it will be utilizing javascript and a database, which are outside of my knowledge as of today. 
-    There is a graphical mockup of what the leader board may look like when it launches
+* Question
+This is what the page looks like when the question is showed along with the 4 alternative answers
 
-![Results](https://thomasforselius.github.io/project-1/images/leaderboard_splash.png)
+![Question](https://thomasforselius.github.io/milestone2/img/question_splash.png)
 
 * Sign up / Login _note: this is a future feature due to the need for database and javascript knowledge which I do  
     not have right now
