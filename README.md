@@ -10,6 +10,8 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 > [UX Design and wireframe mockup](#ux-design)
   >- [Typography](#typography)
   >- [Color Scheme](#color-scheme)
+> [Navigation](#navigation)
+> [Pages](#pages)
 > [Technologies](#technologies)
 > [Testing](#testing)
 > [Deployment](#deployment)
@@ -93,68 +95,18 @@ The only part of the game that doesn't have a white background are the buttons.
     - One button for each possible answer on every question
     - Restart game. 
 
-## _Desktop and tablet version_
-
-![Nav Bar Desktop](https://thomasforselius.github.io/project-1/images/menu_desktop.png)
-
-## _Mobile version_ 
-  * When clicked on 'Menu' the pop-down menu will appear with blurred background
-  * This menu has the attribute 'Sticky' , so it is always at thte top of the screen
-
-
-![Nav Bar mobile - closed](https://thomasforselius.github.io/project-1/images/menu_mobile.png)
-
-![Nav Bar mobile - open when clicked](https://thomasforselius.github.io/project-1/images/menu_mobile_active.png)
-
-
-## Footer bar
-
-* At the bottom of the page there is a sticky footer with three social media icons: 
-  * Facebook
-  * Instagram
-  * Twitter
-
-  _Note: these are not linked at the moment_
-
-
-![Footer Bar](https://thomasforselius.github.io/project-1/images/footer.png)
-
-## Links 
-
-* These are the links to easily navigate around the website. 
-  They are always available on all pages to increas the easy of use when moving around on the page. 
-
-  * Home
-      - This is the first page the user sees when visiting the page;
-      It has a very short but informative description of what the game is and how it works.
-      also has a call to action in the form of a button that takes the user to the page where they can register for the game. 
-  * What is it? 
-      - this page describes what the game is in more detail like rules and a brief history of how the game came about. 
-  * Events
-      - shows all the planned events throughout the year. Each event will have a card with the following information: 
-        Date, type of activity, team event or solo, location and directions how to get there
-  * Results 
-      - Displays the current standings of the active game you are participating in. At the moment this feature is a work in progress since it will be utilizing javascript and a database, which are outside of my knowledge as of today. 
-      There is a graphical mockup of what the leader board may look like when it launches
-  * Sign up / Login _note 
-      - This is a future feature due to the need for database and javascript knowledge which I do not have right now
-
-
 ## Pages
 
-* The landing page / Home
-  This is the first page the user sees when visiting the page;
+* The landing page / Initial game page
+  This is the first page the user sees when visiting;
   It has a very short but informative description of what the game is and how it works.
-  also has a call to action in the form of a button that takes the user to the page where they can register for the game. 
-  This section SHORTLY ( ca 5-10 seconds after entering page) describes what the game is about and how they sign up; this is where the call to action button is on the first page
+  also has a call to action in the form of a button that takes the user to the page where they can create a player for the game. 
 
-  _Selling point - get their attention. by writing a small but intresting bit of info about the game you keep or increase people's attention to keep them on the page_
-
-![Landing Page](https://thomasforselius.github.io/project-1/images/home_splash.png)
+![Landing Page](https://thomasforselius.github.io/milestone2/img/home_splash.png)
 
 * What is it? ; this page describes in more detail what the game is about, how many players, what type of activities, how points are counted as well as rules and regulations
 
-![What is it?](https://thomasforselius.github.io/project-1/images/what_splash.png)
+![What is it?](https://thomasforselius.github.io/milestone2/img/create_splash.png)
 
 * Events ; shows all the planned events throughout the year.
     Each event will have a card with the following information: 
