@@ -59,19 +59,19 @@ line-height:10px;
 }
 
 .button { 
-    text-align: center;
-    padding: 10px 20px;
+    height: 50px;
+    padding: 10px;
     margin: 5px auto;
     background-color: #ffccbb;
     transition: 0.3s ease-out;
     border: none;
     border-radius: 20px;
+    width: 200px;   
 }
 
 .button:hover {
     background-color: #2dc2a7;
     transition: 0.3s ease-in;
-    
 }
 .form{
     margin: 0 auto;
