@@ -32,7 +32,7 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 * The next step is to create a player, and they do this by clicking the button "Create a player"
     - The transition from one page to another is done by sliding in each page from the bottom and out to the top to create a more dynamic effect for the user
 * This takes the player to the next page where they enter their a name, age and choose a genre of questions
-    - When entering a name, the game will only accept alphabetic characters A-Ö in capital and lower case
+    - When entering a name, the game will only accept alphabetic characters A-Ö in capital and lower case, using the _reject method_
     - When entering age, the lowest age accepted is 5, and if the player enters a number lower than 5, there will be a popup alert saying that they must enter an age 5 or larger
     - Then they have to choose a genre for the questions. This is done by a drop down menu with 2 alternatives; 
         - Music
@@ -105,7 +105,8 @@ The only part of the game that doesn't have a white background are the buttons.
 ![Landing Page](https://thomasforselius.github.io/milestone2/img/home_splash.png)
 
 * Create a player
-This is the first interactive page where the user gets to enter his/her name, age and choose a genre for the questions
+  - This is the first interactive page where the user gets to enter his/her name, age and choose a genre for the questions
+  - In this page, when a pl
 
 ![Create a player](https://thomasforselius.github.io/milestone2/img/create_splash.png)
 
@@ -211,7 +212,8 @@ The following techs are used for testing:
 ### Validator Testing 
 
 * HTML
-  * No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthomasforselius.github.io%2Fproject-1%2Findex.html)
+  * Some errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthomasforselius.github.io%2Fmilestone2%2Findex.html)
+    These errors are however not relevant since I inject text and buttons into these through DOM manipulation via the Javacsript code.
 * CSS
   * Only one error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasforselius.github.io%2Fproject-1%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
   This is referred to the height property of the button class.
