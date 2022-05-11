@@ -2,7 +2,7 @@ body {
     padding: 10px;
     font-family: 'Roboto Flex', sans-serif;
     text-align: center;
-    background-image: url(/img/bg.jpg);
+    background-image: url(../img/bg.jpg);
     background-size:cover;
 }
 
