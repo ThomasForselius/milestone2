@@ -104,19 +104,15 @@ The only part of the game that doesn't have a white background are the buttons.
 
 ![Landing Page](https://thomasforselius.github.io/milestone2/img/home_splash.png)
 
-* What is it? ; this page describes in more detail what the game is about, how many players, what type of activities, how points are counted as well as rules and regulations
+* Create a player
+This is the first interactive page where the user gets to enter his/her name, age and choose a genre for the questions
 
-![What is it?](https://thomasforselius.github.io/milestone2/img/create_splash.png)
+![Create a player](https://thomasforselius.github.io/milestone2/img/create_splash.png)
 
-* Events ; shows all the planned events throughout the year.
-    Each event will have a card with the following information: 
-      Date
-      Type of activity
-      Team event or solo
-      Cost
-      Location and directions how to get there
+* Countdown timer
+This is a countdown timer preceeding every question so the user gets 3 seconds to get ready before the next question is displayed
 
-![Events page](https://thomasforselius.github.io/project-1/images/events_mockup.png)
+![Countdown](https://thomasforselius.github.io/milestone2/img/countdown_splash.png)
 
 * Results ; displays the current standings of the active game you are participating in. 
     At the moment this feature is a work in progress since it will be utilizing javascript and a database, which are outside of my knowledge as of today. 
