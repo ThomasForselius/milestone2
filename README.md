@@ -5,17 +5,17 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 
 # Table of Contents
 
->1. [What is Quirky Quiz?](#what-is-it)
+> [What is Quirky Quiz?](#what-is-it)
  >- [User story](#user-story)
->2. [UX Design and wireframe mockup](#ux-design)
+> [UX Design and wireframe mockup](#ux-design)
   >- [Typography](#typography)
   >- [Color Scheme](#color-scheme)
->3. [Existing Features](#features)
->4. [Future Features](#future-features)
->5. [Technologies](#technologies)
->6. [Testing](#testing)
->7. [Deployment](#deployment)
->8. [Credits](#credits)
+> [Existing Features](#features)
+> [Future Features](#future-features)
+> [Technologies](#technologies)
+> [Testing](#testing)
+> [Deployment](#deployment)
+> [Credits](#credits)
 
 
 # What is it?
@@ -72,8 +72,8 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 ## Typography
 
 There is only one font used, to keep it simple and clean.  
-  * Italiana - a serif font used for Hero text and navigation
-  ![Italiana](https://thomasforselius.github.io/milestone2/img/roboto.png)
+  * Roboto Flex - a serif font used for Hero text and navigation
+  ![Roboto Flex](https://thomasforselius.github.io/milestone2/img/roboto.png)
     > Link to Google fonts https://fonts.google.com/specimen/Roboto+Flex?query=robot
   
 ## Color Scheme
