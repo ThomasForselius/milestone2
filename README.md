@@ -58,29 +58,23 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 
 ## Responsive mockup of the webpage
 
-![Responsive Mockup](https://thomasforselius.github.io/project-1/images/responsive.png)
+![Responsive Mockup](https://thomasforselius.github.io/milestone2/img/responsive.png)
 
 * On of the most important features of webpages today is being responsive, since the largest amount of people view webpages on their mobile devices. Responsive websites are a must, if your goal is the keep the interest of the visitor
 * My idea when creating this page is that I wanted to simple and esthetically pleasing design without too much flashy functions and design elements that draw attention away from the original idea and purpose. 
-* The basic design was done in Figma - a free, easy to use online wireframing tool
 * Colors used are simple - I wanted to keep it simple with a high contrast for maximum accessibility; 
     - Black text on white background - for main text 
-    - White text on dark background - for menu and hero header text
-* The background I chose is a group of people gathered in the sunrise/sunset to give a friendly sense of sharing fun events with friends. This background image cought my eye due to the very subtle nature of it; there's nothing distracting about the image so you concentrate on the webpage itself, but still get a sense of context of friendship
+* The background I chose is a fun and colorful but too distracting image that fits the theme of the game.
 * The background image works well as a full page background that isn't too distracting, but also very well on responsive media
-* Navigation styling is done with resposiveness in mind, so the desktop and tablet version of the menus are the same. 
-  The width of the menu is adaptive so it's as resposive as possible.
+* THe design is done from 'Mobile first' mindset, but adapted to work on larger screens as well
 
 ## Typography
 
-There are only two fonts used, to keep it simple and clean. 
+There is only one font used, to keep it simple and clean.  
   * Italiana - a serif font used for Hero text and navigation
-  ![Italiana](https://thomasforselius.github.io/project-1/images/italiana_ss.png)
-    > Link to Google fonts https://fonts.google.com/specimen/Italiana 
-  * Manrope - a sans serif font used for all other text due to it's good readability
-  ![Manrope](https://thomasforselius.github.io/project-1/images/manrope_ss.png)
-    > Link to Google fonts https://fonts.google.com/specimen/Manrope
-
+  ![Italiana](https://thomasforselius.github.io/milestone2/img/roboto.png)
+    > Link to Google fonts https://fonts.google.com/specimen/Roboto+Flex?query=robot
+  
 ## Color Scheme
 
 The main idea behind the whole concept is keeping it simple. Therefor I chose black and white with some subtle hints of color. 
