@@ -10,8 +10,6 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 > [UX Design and wireframe mockup](#ux-design)
   >- [Typography](#typography)
   >- [Color Scheme](#color-scheme)
-> [Existing Features](#features)
-> [Future Features](#future-features)
 > [Technologies](#technologies)
 > [Testing](#testing)
 > [Deployment](#deployment)
@@ -85,9 +83,6 @@ The only part of the game that doesn't have a white background are the buttons.
     - All the buttons are light pink when displayed
     - When the user hovers over the buttons with a mouse - they change background color to teal
     - Call to action button on first page - Create Player
-
-# Features
-
 
 
 ## Navigation
