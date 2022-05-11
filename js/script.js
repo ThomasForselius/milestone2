@@ -101,7 +101,7 @@ document.getElementById('create').addEventListener('submit', (event) => {
     if(playerAge.value == "" || playerAge.value < 5){
         playerAge.style.border="1px solid red";
         playerAge.focus();
-        alert("You must enter an age - 5 or higher to play!")
+        alert("You must enter an age - 5 or higher to play!");
         return;
     }
     if(playerGenre.value == ""){
@@ -113,7 +113,7 @@ document.getElementById('create').addEventListener('submit', (event) => {
         document.getElementById('createplayerbtn').style.display = 'none';
         createPlayer(); // Call function to fill the variables into the player object
     }
-})
+});
 
 function createPlayer() {
 
@@ -141,7 +141,7 @@ function countDown(){ // num is a boolean to check if the game needs to restart
     setTimeout(function(){questionheader.innerHTML = `${play} in: 3`;}, 500);
     setTimeout(function(){questionheader.innerHTML = `${play} in: 2`;}, 1500);
     setTimeout(function(){questionheader.innerHTML = `${play} in: 1`;}, 2500);
-    setTimeout(function(){newQuestion()},3500);
+    setTimeout(function(){newQuestion();},3500);
     }
 }
 
@@ -180,17 +180,17 @@ function checkAnswer(choice){
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
         currentQuestion++;
-        setTimeout(function(){countDown()}, 1000);
+        setTimeout(function(){countDown();}, 1000);
     }
     else if(currentQuestion < 4){
         info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
         currentQuestion++;
-        setTimeout(function(){countDown()}, 1000);
+        setTimeout(function(){countDown();}, 1000);
     }
     else{ // If it's the last question, it calls finishGame function
         questionheader.innerHTML = "<h2>Game complete!</h2>";
         questionPlaceHolder.innerHTML = "";
-        setTimeout(function(){finishGame()}, 1500);
+        setTimeout(function(){finishGame();}, 1500);
      }
 }
 
