@@ -30,6 +30,7 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 * When the user loads the page, they are presented with the starting page of the game. The game and page design are made very simple to accomodate all ages and people , even those who are not used to computers or electronic devices
 * On the first page, the user can read the very simple rules for the game
 * The next step is to create a player, and they do this by clicking the button "Create a player"
+    - The transition from one page to another is done by sliding in each page from the bottom and out to the top to create a more dynamic effect for the user
 * This takes the player to the next page where they enter their a name, age and choose a genre of questions
     - When entering a name, the game will only accept alphabetic characters A-Ö in capital and lower case
     - When entering age, the lowest age accepted is 5, and if the player enters a number lower than 5, there will be a popup alert saying that they must enter an age 5 or larger
@@ -77,34 +78,13 @@ There is only one font used, to keep it simple and clean.
   
 ## Color Scheme
 
-The main idea behind the whole concept is keeping it simple. Therefor I chose black and white with some subtle hints of color. 
+The main idea behind the whole concept is keeping it simple. Therefor I chose black text on white background for the main container with some colors for the main background. 
+The only part of the game that doesn't have a white background are the buttons.
 
-  * White text: 
-    - Navigation
-    - Header text
-    - Text in sign up form
-    - Call to action button on first page
-
-    The reason I chose white text color for these is because of the dark background on the webpage, so the white makes for great contrast
-
-  * Black text: 
-    - Header on main text container
-    - Main information text
-
-    The reason I chose black text color for these is because of the white background for the main information, so the black makes for great contrast
-
-  * Other color features: 
-    - Mobile device responsive drop down menu has a blurred black background. 
-    The reason for this is mostly to 'spice' up the design in a very simple yet intresting way, in contrast to most other mobile menus which are a plain color with no transparency. 
-    
-    _It's a rich feature with a low price tag_
-    - Fading in dark background on the call to action button on the first page. 
-    The first reason for this is to make a simple but intresting design feature to keep the user intrested and get a slightly 'alive' feel of the page. 
-    The second reason is that I wanted to try something new that I haven't tried, and I fel that this effect would suit the page perfectly due to it's clean nature
-    - Fading in red outline of input text areas on sign up page
-    The first reason I chose this is to draw attention to the current input text box 
-    The second reason is I like to play around with effects and experiment with new ideas I haven't tried before
-    _To be honest, this is probably the strongest reason haha_
+  * Buttons color
+    - All the buttons are light pink when displayed
+    - When the user hovers over the buttons with a mouse - they change background color to teal
+    - Call to action button on first page - Create Player
 
 # Features
 
