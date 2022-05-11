@@ -119,86 +119,50 @@ This is what the page looks like when the question is showed along with the 4 al
 
 ![Question](https://thomasforselius.github.io/milestone2/img/question_splash.png)
 
-* Sign up / Login _note: this is a future feature due to the need for database and javascript knowledge which I do  
-    not have right now
-    A new user will sign up for an account to be able to join a game.
-    Existing user/s can log in and either administrate(if they created a game), or edit an existing game they created
+* Game Finished
+- This is the final page, when the user has played through all the 5 questions. 
+- Here the user is presented with how many total points they got
+- At the bottom they are presented with a call-to-action button that resets the game so they can play again
 
-  _At the moment, when you fill out the register form_
-
-    This page will allow the user to either register or log in to the webpage. 
-    When they register they will have to provide the following information: 
-      First name (required)
-      Last name (Required)
-      Email (required)
-      Password (required)
-
-    In the future, when they log in they can edit their email, password, name, upload an avatar and choose to delete their account from the site by entering password as a confirmation 
-    _Required tech for full funcitonality: deeper CSS knowledge_
-
-![Sign up](https://thomasforselius.github.io/project-1/images/signup_splash.png)
+![Finished](https://thomasforselius.github.io/milestone2/img/finished_splash.png)
 
 
-## Future features
+## Future features / Features I wanted
 
-* Sign up page; 
-    There will be a register page where you sign up and apply to comepete in one of these games. 
-    Anybody can register, and as soon as you have registered, you can create your own game of events. 
-    * At the moment this is just a mockup since the I don't have the required knowledge
-    >_Required tech for full funcitonality: Javascript and database knowledge_
-* Log in as admin to CRUD(create, read, update, delete) an event and edit scores
-    >_Required tech for full funcitonality: Javascript and database knowledge_
-* User page - where users can upload profile picture that shows in the results list
-    >_Required tech for full funcitonality: Javascript and database knowledge_
-* Bonus feature: make events "mystery event", where only date, time and location are displayed
-    >_Required tech for full funcitonality: Javascript and database knowledge_
-* Live results - will display the current results of the current game you are a part of when logged in
-    >_Required tech for full funcitonality: Javascript and database knowledge_
-* Light / dark mode
-    >_Required tech for full funcitonality: deeper CSS knowledge_
-
-* Events page;
-  * Design ideas for events page with cards
-    * red thread swirling downward, left to right and vice versa with a card for each event
-      * onClick : will pop up a larger version of that eventcard with more details
-    * separate cards will display the top 3 scores of each individual event
-      * onClick : will pop up more detailed info about that event i.e.  all contestants and their scores
-
-  >_Required tech for full funcitonality: Javascript and database knowledge_
-
-
+* Google Sheets API
+    The idea from the beginning was to have all the questions read into the quiz from a Google Sheets document with questions
+    >_Required tech for full funcitonality: Further Javascript knowledge and time_
+* Multiplayer possibility; 
+    I wanted to make the possibility to add multiple players, but due to time constraint I didn't feel that it was viable to chance the whole project with this feature.
+    >_Required tech for full funcitonality: Time_
+* Reset game 
+    When the player pushed the reset button I wanted the player to return to the countdown timer and be presented with a new question, while the game still displayed their chosen name and age. 
+    >_Required tech for full funcitonality: Further Javascript knowledge and time_
 
 # Technologies
 
-
-* Figma
-  * Figma is a free web software for drawing design mockups easily. I used that as a visual kind of brainstorming when drawing up the wireframe
 * HTML
-  * This is the markup language that makes up the structure of the webpage
+    * This is the markup language that makes up the structure of the webpage
 * CSS
-  * This is the styling languange that gives the webpage it's visual design
+    * This is the styling languange that gives the webpage it's visual design
 * Google Fonts
-  * There are two fonts imported from Google Fonts used on the whole page: 
-    * Italiana
-    * Manrope
+    * Roboto Flex
 * VS Code
-  * the IDE (Integrated developer environment) that is used to code everything, commit and push to github with the git method
+    * the IDE (Integrated developer environment) that is used to code everything, commit and push to github with the git method
 * Google Chrome
-  * Web browser for viewing the webpage
+    * Web browser for viewing the webpage
+* Safari 
+    * Web browser used for checking design and functions on another broswer
 * Google Chrome developer tools
-  * Used for inspecting and bug testing the webpage and responsive design
+    * Used for inspecting and bug testing the webpage and responsive design
 * Git verison control via GitHub
-  * Git is the version control software used to commit and push code to the GitHub repository 
+    * Git is the version control software used to commit and push code to the GitHub repository 
 * GitHub
-  * this is where the source code and images is stored online - also called a repository.
+    * this is where the source code and images is stored online - also called a repository.
     The live page uses the main branch in the Github repository. 
-    >_All coming updates will each be using a separate branch for a function, to ensure easy updating and version control_
 
 * Extra styling features
-  * Drop down menu on mobile devices is a nice feature that uses pure css to accomplish a drop down menu
-  * The background filter of the drop down menu is a blurry background effect - css
-  * Fadein background color on Join-button - css
-  * Fadein red input box border - css
+  * Fadein backgroiund-color on buttons for some dynamic styling feeling - css
 
 
   So, why did I want these extra functions and design elements?
@@ -210,7 +174,8 @@ This is what the page looks like when the question is showed along with the 4 al
 
 The whole building of a website is an ongoing test and coarse debugging process, which is very nice, since you get virtually immediate feedback when working with the visual part. 
 
-Building this website I have used VS Code for the coding, while Google Chrome for the visual feedback on a local server extension. This lets me test the webpage out before commiting and pushing it to Github for live testing with online extensions and validators like Lighthouse, W3C html validator and W3C CSS validator. 
+Building this website I have used VS Code for the coding, while Google Chrome for the visual feedback on a local server extension. This lets me test the webpage out before commiting and pushing it to Github for live testing with online extensions and validators like Lighthouse, W3C html validator and W3C CSS validator as well as Javascipt Validator 
+
 
 My testing procedure is conducted on the live Github repository using the following tech / apps / extensions / plugins / webpages: 
 
