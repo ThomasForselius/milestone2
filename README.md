@@ -141,6 +141,8 @@ This is what the page looks like when the question is showed along with the 4 al
 
 # Technologies
 
+* Javascript
+    * This project is coded using Javascript
 * HTML
     * This is the markup language that makes up the structure of the webpage
 * CSS
@@ -162,22 +164,30 @@ This is what the page looks like when the question is showed along with the 4 al
     The live page uses the main branch in the Github repository. 
 
 * Extra styling features
-  * Fadein backgroiund-color on buttons for some dynamic styling feeling - css
+  * Fade-in and -out background-color on buttons for some dynamic styling feeling - css
 
-
-  So, why did I want these extra functions and design elements?
+  So, why did I want this extra function and design element?
 
   +10%. This is my mindset in most occasions when producing something. 
   If I always give 10% extra, this is a way to push myself and the quality of the service or goods I produce.
   
 # Testing 
 
-The whole building of a website is an ongoing test and coarse debugging process, which is very nice, since you get virtually immediate feedback when working with the visual part. 
+The whole building of a website is an ongoing test and coarse debugging process, which is very nice, since you get virtually immediate feedback when working with coding.
 
-Building this website I have used VS Code for the coding, while Google Chrome for the visual feedback on a local server extension. This lets me test the webpage out before commiting and pushing it to Github for live testing with online extensions and validators like Lighthouse, W3C html validator and W3C CSS validator as well as Javascipt Validator 
+When programming with Javascript, the most useful debugging function is to console.log(); on any and every part of the code so I can follow along in the console while I un the script in the browser. 
+A very useful function of the console of Chrome Dev Tools is the ability to enter commands in the console in real time and see the immediate change on the page.
+This way I don't have to go back to VS Code, change the code, save and update the page in the browser. 
 
+* Local live server
 
-My testing procedure is conducted on the live Github repository using the following tech / apps / extensions / plugins / webpages: 
+Building this website I have used VS Code for the coding, while Google Chrome for the visual feedback on a local server extension. This lets me test the webpage out before commiting and pushing it to Github for live testing with online extensions and validators like Lighthouse, W3C html validator and W3C CSS validator as well as Javascipt Validator CodeBeautify. 
+
+* Push to gitHub
+
+Once I feel that the homepage is as good as finished, I commit and push the changes to my gitHub repository with comments on any and all changes to the code. 
+
+The following techs are used for testing: 
 
 * Web browser
   * Google Chrome
@@ -185,14 +195,11 @@ My testing procedure is conducted on the live Github repository using the follow
 * Visual 
   * Both HTML structure and CSS styling is tested on each web browser
 * Functionality testing
-  * Each link is tested on both browsers against all separate links on the page. 
-    i.e.(home -> events; events -> results; results -> what is it? etc etc.)
-    > No broken links found
+  * Each button is tested
   * Responsive design tested automatically with http://ami.responsivedesign.is
   * Responsive sizing tested manually with Chrome Dev tools Inspector
-    * Desktop version on screen size larger than 850px 
-    * Tablet version on screen size between 440px - 850px
-    * Mobile version on screen size between 220px - 440px
+    * Tablet and desktop version on screen size above 400px wide;
+    * Mobile version on screen size below 400px
       * No further testing required on smaller screen sizes since no current devices use such small resolutions. 
         _Well; that would be a smart watch, but that's just madness, if it's even possible._
     
