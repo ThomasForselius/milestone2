@@ -89,13 +89,14 @@ The only part of the game that doesn't have a white background are the buttons.
 # Features
 
 
-## Navigation Bar
 
-* The navigation bar is displayed on all pages, the full responsive navigation bar includes links to the Index page, results page, events page and Sign Up page and is identical in each page to allow for easy navigation.
-* This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
-* There are two types of menu bars on the page; both whitch are mutually exclusive via @mediaquery in _style.css_ to fit responsive design and mobile devices
-* The links in the menu are the following: 
-      * Home, What is it?, Events, Results, Sign up / Login 
+## Navigation
+
+* This game has very simple navigation. Each navigation element is only shown by themselves, so you can't make a (navigational) wrong choice. 
+    - A "Create Player" button that leads to the next page where the user creates their player profile.
+    - A "Start Game" button that starts the quiz itself
+    - One button for each possible answer on every question
+    - Restart game. 
 
 ## _Desktop and tablet version_
 
