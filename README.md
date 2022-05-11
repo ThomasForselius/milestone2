@@ -213,18 +213,17 @@ The following techs are used for testing:
 * HTML
   * No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthomasforselius.github.io%2Fproject-1%2Findex.html)
 * CSS
-  * No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasforselius.github.io%2Fproject-1%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+  * Only one error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasforselius.github.io%2Fproject-1%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+  This is referred to the height property of the button class.
 * Accessibility via Lighthouse extension
-  [Lighthouse](https://thomasforselius.github.io/project-1/images/lighthouse_validator.png)
+  [Lighthouse](https://thomasforselius.github.io/milestone2/img/lighthouse.png)
 * Responsive validation was done by using the following website: [Am I responsive](http://ami.responsivedesign.is/)
 
 ### Unfixed Bugs
 
 Known bugs: 
-  * Drop down menu doesn't close on mobile screens when using Safari
-  * www.kompiskampen.se is bought, but not yet linked to the github page
-  * The register form doesn't send anything due to the lack of backend functionality - this is an upcoming feature
-  * Footer icons are not linked
+  * According to the Jigsaw CSS validator, there is a parsing error for the .button class regaring the height property. 
+    I have tried to fix this but cannot understand what the problem might be.  
 
 ## Deployment
 
@@ -237,24 +236,20 @@ Known bugs:
 * Once the main branch has been deployed I commit and push from VS Code to the Github repo and main branch. 
 
 
-The live github link can be found here - https://thomasforselius.github.io/project-1/
-Also, the following domains have been bought: 
-  * www.friendfeud.se (working domain name)
-  * www.kompiskampen.se (not working at the moment)
+The live github link can be found here - https://thomasforselius.github.io/milestone2/
 
 
 ## Credits 
 
-* Credit for pop-down menu when on mobile device goes to https://isabelcastillo.com/pure-css-mobile-toggle-menu
 * Big shout-out to Monster Energy for keeping me awake during the dark hours
 
 
 ## Media
 
-* Background image is taken from www.pixabay.com - a page with royalty free images for commercial use without attribution
-https://pixabay.com/photos/people-friends-together-happy-kid-4050698/
+* Background image is taken from www.pexels.com - a page with royalty free images for commercial use without attribution
+https://www.pexels.com/sv-se/foto/konst-monster-abstrakt-fargrik-310452/
 
 
 ### Content 
 
-- The readme file was copied from CodeInstitute's template for the first project in their 5p front-end dev course
+- The readme file was copied from my first readme I made for the first project in my 5p front-end dev course at CodeInstitute
