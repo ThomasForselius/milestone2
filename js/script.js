@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', function(){ console.log('Game loaded'); });
 
 // ----- Defining variabels used in game ----- //
-var player = {name:"", age:"", genre:"", score:0}; // Declares an object to store player data in
+var player = {name : "", age : "", genre : "", score : 0}; // Declares an object to store player data in
 // Gets and declares player name, color and genre id´s from the 'Create a player' page
 const playerName = document.getElementById('name');
 const playerAge = document.getElementById('age');
