@@ -59,7 +59,6 @@ line-height:10px;
 }
 
 .button { 
-    width: 150px;
     text-align: center;
     padding: 10px 20px;
     margin: 5px auto;
@@ -148,7 +147,7 @@ td{
 h1{
     font-size: 3em;
     margin: 0px;
-    line-height: -50%;
+    line-height: 80px;
 }
 
 /* Media query for mobile devices */
