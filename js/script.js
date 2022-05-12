@@ -159,6 +159,7 @@ function newQuestion(){
         else{questionheader.innerHTML = "No genre chosen, please try again.";}
 
         questionheader.innerHTML = qGenre.q;
+
         for(let i = 0; i < qGenre.alt.length; i++){
             quest = `<button class="button" value="${qGenre.alt[i]}" onclick="checkAnswer('${qGenre.alt[i]}')" id="btn${i}">${qGenre.alt[i]}</button><br>`;
             qTemp += quest;
@@ -200,7 +201,6 @@ function checkAnswer(choice){
 function finishGame(){
     info.innerHTML = "";
     questionPlaceHolder.innerHTML = "";
-    info.innerHTML =`<button class="button" onclick="window.location.reload()">Play again!</button>`;
     let html = ``; // declares a new value to fill when the game is over
     if(player.score == 5){html = `${player.name}, that is awesome! Well done!<br> You got all questions correct!`;}
     else if(player.score == 4){html = `Hey ${player.name}, almost all the way! Just one wrong answer.<br> Better luck next try!`;}
@@ -210,7 +210,7 @@ function finishGame(){
     else if(player.score < 2 && player.age < 15){html = `
         Don't worry ${player.name}!<br>Considering your age of ${player.age}, this is ok! <br>You should stay in school and check out ${player.genre} history.`;}
 
-    questionheader.innerHTML = `You got <h1>${player.score}</h1> points!`;
+    questionheader.innerHTML = `You got <h1>${player.score}</h1> points!<br><br><br><button class="button" onclick="window.location.reload()">Play again!</button>`;
     questionPlaceHolder.innerHTML = html;
 }
 
