@@ -18,6 +18,7 @@ var quest = "";
 var qGenre = [];
 var play = "";
 
+document.getElementById('question').style.visibility = "hidden";
 const musicQ =  //Questions and answers for Music genre
     [
         {

@@ -40,7 +40,7 @@ p{
 
 .question{
     height: 420px;
-    margin-top: -300px;
+    margin-top: 100px;
 }
 
 .question_after {
@@ -92,7 +92,6 @@ p{
 }
 
 #createplayer {
-    margin-top: -20px;
 }
 
 .createplayer_after {
@@ -100,6 +99,7 @@ p{
     height: 300px;
     opacity: 0%;
     transition: 1s;
+    background-color: #2dc2a7;
 }
 
 .alt{
