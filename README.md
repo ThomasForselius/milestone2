@@ -6,8 +6,8 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 # Table of Contents
 
 > [What is Quirky Quiz?](#what-is-it)
- >- [User story](#user-story)
-> [UX Design and wireframe mockup](#ux-design)
+ >- [User story](#user-story) 
+> [UX Design](#ux-design)
   >- [Typography](#typography)
   >- [Color Scheme](#color-scheme)
 > [Navigation](#navigation)
