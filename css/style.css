@@ -90,6 +90,10 @@ p{
     text-align: center;
 }
 
+#createplayer {
+    margin-top: -20px;
+}
+
 .createplayer_after {
     margin-top: -400px;
     height: 300px;
