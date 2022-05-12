@@ -5,17 +5,17 @@ an original web project from Thomas Forselius, studying font-end webdevelopement
 
 # Table of Contents
 
-> [What is Quirky Quiz?](#what-is-it)
+> 1. [What is Quirky Quiz?](#what-is-it)
  >- [User story](#user-story) 
-> [UX Design](#ux-design)
+> 2. [UX Design](#ux-design)
   >- [Typography](#typography)
   >- [Color Scheme](#color-scheme)
-> [Navigation](#navigation)
-> [Pages](#pages)
-> [Technologies](#technologies)
-> [Testing](#testing)
-> [Deployment](#deployment)
-> [Credits](#credits)
+> 3. [Navigation](#navigation)
+> 4. [Pages](#pages)
+> 5. [Technologies](#technologies)
+> 6. [Testing](#testing)
+> 7. [Deployment](#deployment)
+> 8. [Credits](#credits)
 
 
 # What is it?
