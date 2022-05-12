@@ -213,7 +213,7 @@ The following techs are used for testing:
 
 * HTML
   * Some errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthomasforselius.github.io%2Fmilestone2%2Findex.html)
-    These errors are however not relevant since I inject text and buttons into these through DOM manipulation via the Javacsript code.
+    These errors are functionally not relevant since I inject content into these through DOM manipulation via the Javacsript code.
 * CSS
   * Only one error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthomasforselius.github.io%2Fproject-1%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
   This is referred to the height property of the button class.
