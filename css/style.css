@@ -60,13 +60,13 @@ p{
 }
 
 .button { 
-    height: 50px;
     padding: 10px;
     margin: 5px auto;
     background-color: #ffccbb;
     transition: 0.3s ease-out;
     border: none;
     border-radius: 20px;
+    height: 30px;
     width: 200px;   
 }
 
