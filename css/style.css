@@ -40,6 +40,7 @@ p{
 
 .question{
     height: 420px;
+    margin-top: -300px;
 }
 
 .question_after {
