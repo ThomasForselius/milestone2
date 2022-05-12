@@ -177,6 +177,7 @@ function checkAnswer(choice){
     document.getElementById('btn0').disabled = true;
     
     if(qGenre.answer === choice){
+        info.className = "info_correct";
         info.innerHTML = "Correct answer!";  
         player.score = player.score + 1; 
         scoreboard(); // Calles the scoreboard function to update current score
@@ -184,7 +185,8 @@ function checkAnswer(choice){
         setTimeout(function(){countDown();}, 1000);
     }
     else if(currentQuestion < 4){
-        info.innerHTML = `<font color="red"><b>Wrong answer!</b></font>`;
+        info.className = "info_wrong";
+        info.innerHTML = "Wrong answer!";
         currentQuestion++;
         setTimeout(function(){countDown();}, 1000);
     }

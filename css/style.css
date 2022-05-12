@@ -156,6 +156,18 @@ h1{
     line-height: 80px;
 }
 
+.info_correct{
+    font-weight: 900;
+    font-size: 2em;
+    color: green;
+}
+
+.info_wrong{
+    font-weight: 900;
+    font-size: 2em;
+    color: red;
+}
+
 /* Media query for mobile devices */
 
 @media screen and (max-width: 400px) { 
